@@ -1,0 +1,95 @@
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.container {
+  max-width: 980px;
+  padding: 0 25px;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 35px;
+  }
+}
+.container_center {
+  margin: auto;
+}
+.container_medium {
+  max-width: 900px;
+}
+.container_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.container_large {
+  max-width: 1980px;
+}
+.burger_btn {
+  display: block;
+  color: #000;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 70px;
+}
+.layout {
+  display: none;
+}
+.aside {
+  min-width: 680px;
+}
+.brief {
+  width: 1980px;
+  height: 100vh;
+  padding-left: 60px;
+  justify-content: space-between;
+  display: flex;
+}
+.brief__main {
+  width: 1380px;
+  padding-top: 60px;
+}
+.brief__bg {
+  width: 680px;
+  background-image: url("../brief_bg.png");
+  background-size: cover;
+  background-position: center;
+}
+.brief__wrap {
+  padding-top: 100px;
+}
+.brief__begin {
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+.brief__title {
+  margin-bottom: 45px;
+  font-size: 48px;
+}
+.form {
+  font-size: 24px;
+}
+.form__item {
+  margin-bottom: 30px;
+}
+.form__submit {
+  margin-top: 60px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  color: #7F8B8A;
+  cursor: pointer;
+}
