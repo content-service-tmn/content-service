@@ -1,4 +1,5 @@
 <?php
+echo "checkcheclk";
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";
