@@ -1,5 +1,5 @@
 <?php
-echo "checkcheclk";
+echo ($session->getIP());
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";

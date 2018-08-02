@@ -91,4 +91,4 @@ $config->installed = 1532435276;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('cw40247.tmweb.ru');
+$config->httpHosts = array('cw40247.tmweb.ru', 'localhost:8888');
