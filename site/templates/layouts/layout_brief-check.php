@@ -1,5 +1,5 @@
 <?php
-echo ($session->getIP()); 
+echo ($_SERVER['SERVER_ADDR']);
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";
