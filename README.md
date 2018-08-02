@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to ProcessWire 3.x 
 
 This document is in Markdown. An HTML formatted version of this document 
@@ -188,3 +189,6 @@ Use these steps to clone from SourceTree, our client for using the repository co
 4. Open the directory you just created to see your repository’s files.
 
 Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+=======
+# content-service
+>>>>>>> c1bff1f3f8640762e1052ac03bcc084e31d3faa9
