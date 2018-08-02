@@ -1,25 +1,25 @@
 ProcessWire License Information
 ===============================
 
-Unless otherwise stated, all files in ProcessWire's default site 
-profiles (/site*/*) are MIT licensed, and all files in ProcessWire's 
-core (/wire/* and /index.php) are MPL 2.0 licensed. Some of 
-ProcessWire's core framework files are MIT licensed (where 
-specifically indicated in file header), but if you need a single 
-license to refer to the product, use MPL 2.0. 
+Unless otherwise stated, all files in ProcessWire's default site
+profiles (/site*/*) are MIT licensed, and all files in ProcessWire's
+core (/wire/* and /index.php) are MPL 2.0 licensed. Some of
+ProcessWire's core framework files are MIT licensed (where
+specifically indicated in file header), but if you need a single
+license to refer to the product, use MPL 2.0.
 
 Original works that you create in /site/ (such as templates, modules
 and so on) are not bound to licenses used by ProcessWire, and you may
 choose to license them however you wish. Likewise, 3rd party modules
 by other authors in /site/modules/ may use different licenses where
-indicated. 
+indicated.
 
 For more about ProcessWire licenses, HTML versions, and additional
-information for 3rd party files, please see:
+information for 3rd party files, please see:  
 https://processwire.com/about/license/
 
 The full text of the MPL 2.0 and MIT licenses are included in this
-document below. 
+document below.
 
 
 Mozilla Public License (MPL) Version 2.0
@@ -60,7 +60,7 @@ https://www.mozilla.org/en-US/MPL/2.0/
     means any form of the work other than Source Code Form.
 
 1.7. "Larger Work"
-    means a work that combines Covered Software with other material, in 
+    means a work that combines Covered Software with other material, in
     a separate file or files, that is not Covered Software.
 
 1.8. "License"
@@ -397,16 +397,16 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
   This Source Code Form is "Incompatible With Secondary Licenses", as
   defined by the Mozilla Public License, v. 2.0.
 
- 
- 
-  
-MIT LICENSE 
-===========
-Applicable where MIT License is indicated at the top of given files in 
-the ProcessWire core, or to ProcessWire's default site profiles located 
-in the included /site*/* directories. 
 
-https://processwire.com/about/license/mit/ 
+
+
+MIT LICENSE
+===========
+Applicable where MIT License is indicated at the top of given files in
+the ProcessWire core, or to ProcessWire's default site profiles located
+in the included /site*/* directories.
+
+https://processwire.com/about/license/mit/
 
 The MIT License (MIT)
 
