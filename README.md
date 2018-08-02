@@ -1,4 +1,4 @@
-# Welcome to ProcessWire 3.x
+# Welcome to ProcessWire 3.1
 
 This document is in Markdown. An HTML formatted version of this document
 can be read at: https://github.com/processwire/processwire/blob/master/README.md
