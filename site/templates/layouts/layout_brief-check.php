@@ -1,5 +1,5 @@
 <?php
-echo ($_SERVER['SERVER_ADDR']);
+echo (gethostname());
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";

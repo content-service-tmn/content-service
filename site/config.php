@@ -45,7 +45,7 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  *
  */
 
-$config->dbHost ='localhost';
+$config->dbHost = 'localhost';
 $config->dbName = 'cw40247_db';
 $config->dbUser = 'cw40247_db';
 $config->dbPass = 's2azaeR1';
