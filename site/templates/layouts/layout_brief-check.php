@@ -1,5 +1,4 @@
 <?php
-echo (gethostname());
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";
