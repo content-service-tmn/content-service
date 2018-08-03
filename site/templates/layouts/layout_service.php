@@ -23,6 +23,6 @@
         </ul>
       </div>
     </div>
-    <div class="service__cell background" style="background-image: url('<?=$config->urls->templates?>assets/img/service-2.png')"></div>
+    <div class="service__cell background" style="background-image: url('<?=$config->urls->templates?>assets/img/service-2-b.png')"></div>
   </div>
 </section>

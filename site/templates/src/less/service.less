@@ -51,14 +51,42 @@
     display:inline;
   }
   &__link {
+    font-family: "Oswald",arial,sans-serif;
+    font-size:24px;
+    line-height: 36px;
+    color:black;
+    font-weight: 300;
+    position:relative;
     &_left {
+      padding-left: 60px;
       &:before {
-        content:"<"
+        content:"";
+        width:10px;
+        position:absolute;
+        left:30px;
+        top:5px;
+        bottom:0;
+        transform:translateX(50%) rotate(180deg);
+        background-image: url(../img/arrow.svg);
+        background-position:50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
     &_right {
+      padding-right: 60px;
       &:after {
-        content:">"
+        content:"";
+        width:10px;
+        position:absolute;
+        right:30px;
+        top:5px;
+        bottom:0;
+        transform:translateX(50%);
+        background-image: url(../img/arrow.svg);
+        background-position:50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }
