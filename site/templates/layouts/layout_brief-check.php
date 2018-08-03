@@ -21,7 +21,7 @@ function buildRadios($quest, $id)
         $html .=
             "<div class=\"form__item\">
                         <input type=\"radio\" name=\"question\"  data-next='{$variable->id}'>
-                        <label id='{$variable->id}_label' for=\"one\">{$variable->vartitle}</label>
+                        <label for=\"one\">{$variable->vartitle}</label>
                     </div>";
     }
 
@@ -145,11 +145,14 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 <script>
     $(".form-radios").not("brief__disabled").on("submit", function (e) {
         var prevSection = $(this).closest("section");
-        var answerId = $("input:checked")[0]['dataset']['next'];
-        if (answerId) {
-            answers[$(prevSection).find(".brief__title")[0]["innerHTML"]] = $("#" + answerId + "_label")[0]["innerText"];
+        var answer = $("input:checked");
+        if (answer[0] != undefined) {
+            var answerId = answer[0]["dataset"]["next"];
+            answers[$(prevSection).find(".brief__title")[0]["innerHTML"]] = answer.next("label")[0]["innerText"];
+            console.log( answer.next("label")[0]["innerText"]);
             $("#" + answerId).removeClass("brief__disabled");
             $(prevSection).addClass("brief__disabled");
+            answer.prop('checked', false);
         }
         e.preventDefault();
     });

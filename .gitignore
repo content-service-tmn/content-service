@@ -1,0 +1,8 @@
+node_modules
+.idea/
+aiom/
+cache/
+logs/
+sessions/
+modules/
+*.save
