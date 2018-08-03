@@ -44,7 +44,8 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  * Installer: Database Configuration
  *
  */
-$config->dbHost = 'vh130.timeweb.ru';
+
+$config->dbHost = ( gethostname() == "vh130.timeweb.ru" ) ? 'localhost':'92.53.96.195';
 $config->dbName = 'cw40247_db';
 $config->dbUser = 'cw40247_db';
 $config->dbPass = 's2azaeR1';
@@ -91,4 +92,4 @@ $config->installed = 1532435276;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('cw40247.tmweb.ru');
+$config->httpHosts = array('cw40247.tmweb.ru', 'localhost:8888');
