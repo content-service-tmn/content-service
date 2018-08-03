@@ -23,24 +23,10 @@
 	</section>
 	<section class="amenities">
 		<ul class="service-list">
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-1.png")'></a>
+            <?php foreach ($pages->find("template=layout_service") as $service): ?>
+			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$service->service_image->url?>")'></a>
 			</li>
-
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-2.png")'></a>
-			</li>
-
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-3.png")'></a>
-			</li>
-
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-4.png")'></a>
-
-			</li>
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-5.png")'></a>
-
-			</li>
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$config->urls->templates?>assets/img/service-1.png")'></a>
-
-			</li>
+            <?php endforeach; ?>
 		</ul>
 	</section>
 </div>
