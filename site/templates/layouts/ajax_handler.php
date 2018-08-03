@@ -1,6 +1,6 @@
 <?php
 namespace Processwire;
-if (!$config->ajax) {
+if ($config->ajax) {
     if (isset($_REQUEST["answers"])){
         $emailBody = "";
         foreach ($_REQUEST["answers"] as $title => $answer){
