@@ -13,7 +13,7 @@
 				</div>
 			</div>
 
-			<h1 class="aside__hello">Hello123</h1>
+			<h1 class="aside__hello">He12323</h1>
 			<h2 class="aside__name">Content service</h2>
 			<p class="aside__slogan">Создаем прибыльные системы продаж в интернете</p>
 			<div class="aside__brief">

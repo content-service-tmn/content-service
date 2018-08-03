@@ -56,12 +56,12 @@ var path = {
 };
 
 var config = {
-    server: {
-        baseDir: "./"
-    },
+    // server: {
+    //     baseDir: "./"
+    // },
     //tunnel: true,
-    host: 'localhost', //openserver
-    port: 9000,
+    proxy: 'contentservice.loc' //openserver
+    // port: 9000
     //logPrefix: "Frontend_Devil"
 };
 
