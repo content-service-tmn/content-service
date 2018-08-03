@@ -60,7 +60,7 @@ var config = {
     //     baseDir: "./"
     // },
     //tunnel: true,
-    proxy: 'http://localhost:8888/content-service/' //openserver
+    proxy: 'contentservice.loc' //openserver
     // port: 9000
     //logPrefix: "Frontend_Devil"
 };
