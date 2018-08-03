@@ -1,0 +1,52 @@
+.service {
+
+  &__grid {
+    display:flex;
+    flex-wrap:wrap;
+  }
+  &__cell {
+    box-sizing: border-box;
+    width:50%;
+  }
+}
+
+.content {
+  padding:60px;
+
+  &__heading {
+    margin-top:170px;
+  }
+  &__text {
+    margin-top:50px;
+    padding-right: 140px;
+  }
+  &__button {
+    margin-top:60px;
+  }
+  &__items {
+    display:flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display:inline;
+  }
+  &__link {
+    &_left {
+      &:before {
+        content:"<"
+      }
+    }
+    &_right {
+      &:after {
+        content:">"
+      }
+    }
+  }
+}
+
+.background {
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
