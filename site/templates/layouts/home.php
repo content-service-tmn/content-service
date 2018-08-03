@@ -1,7 +1,7 @@
 <?php namespace Processwire;?>
 
 
-<div class="container_flex container_large">
+<div class="container_flex">
 	<section class="aside">
 
 			<div class="header">
