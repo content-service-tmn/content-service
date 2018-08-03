@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 <link rel="manifest" href="/favicons/site.webmanifest">
 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5"> -->
-<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=cyrillic" rel="stylesheet">
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
 <?php // generate css / js
   $css = AIOM::CSS(array(
-    'assets/less/template.less'
+    'assets/css/template.css'
   ));
   // $js = AIOM::JS(array(
   //   "assets/js/template.js"
