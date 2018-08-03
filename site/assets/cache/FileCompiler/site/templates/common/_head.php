@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
 <?php // generate css / js
   $css = AIOM::CSS(array(
-    'assets/less/template.less'
+    'assets/css/template.css'
   ));
   // $js = AIOM::JS(array(
   //   "assets/js/template.js"
