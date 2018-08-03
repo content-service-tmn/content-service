@@ -6,3 +6,4 @@ logs/
 sessions/
 modules/
 *.save
+js/
