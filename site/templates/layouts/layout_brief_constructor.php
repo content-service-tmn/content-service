@@ -736,5 +736,3 @@ function buildTree($question, $deep){
 
 $briefs = json_decode($json);
 buildTree($briefs, 0);
-
-
