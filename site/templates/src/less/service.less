@@ -11,7 +11,10 @@
 }
 
 .content {
-  padding:60px;
+  padding:60px 60px 170px 60px;
+  position:relative;
+  height:100%;
+  box-sizing: border-box;
 
   &__heading {
     margin-top:170px;
@@ -20,10 +23,27 @@
     margin-top:50px;
     padding-right: 140px;
   }
+  &__fill {
+    display:inline;
+    background-color:rgba(0, 188, 214, 0.7);
+    margin-left: -4px;
+    margin-right:-4px;
+    padding:0 4px;
+  }
+  &__case {
+    margin-top:20px;
+    display:inline-block;
+    color:#00BCD6;
+    border-bottom:2px solid #00BCD6;
+  }
   &__button {
     margin-top:60px;
   }
   &__items {
+    position:absolute;
+    bottom:75px;
+    left:60px;
+    right:60px;
     display:flex;
     justify-content: space-between;
   }
@@ -45,7 +65,7 @@
 }
 
 .background {
-  height:100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
