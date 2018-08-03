@@ -75,8 +75,8 @@ gulp.task('clean', function (cb) {
 
 gulp.task('php:build', function () {
     gulp.src(path.src.php)
-        .pipe(rigger())
-        .pipe(gulp.dest(path.assets.php))
+        // .pipe(rigger())
+        // .pipe(gulp.dest(path.assets.php))
         .pipe(reload({stream: true}));
 });
 
