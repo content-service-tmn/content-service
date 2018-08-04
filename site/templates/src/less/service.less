@@ -33,6 +33,21 @@
       margin-top:170px;
     }
   }
+  &__subheading {
+    font-size:24px;
+    margin-top:30px;
+    margin-bottom:15px;
+    @media(min-width: 1920px) {
+      margin-top:45px;
+    }
+  }
+  &__description {
+    margin-top:15px;
+    font-size:12px;
+    @media(min-width: 1440px) {
+      font-size:18px;
+    }
+  }
   &__text {
     margin-top:30px;
     margin-bottom:15px;
@@ -73,10 +88,18 @@
     }
   }
   &__quote {
-    background-color:rgba(0, 188, 214, 0.7);
     margin-left: -6px;
     margin-right:-6px;
-    padding:0 4px;
+    padding:0 6px;
+    &_site {
+      background-color:rgba(0, 188, 214, 0.7);
+    }
+    &_case {
+      background-color:rgba(253, 77, 79, 0.7);
+      margin-left: -1px;
+      margin-right:-1px;
+      padding:0 1px;
+    }
   }
   &__case {
     margin-top:15px;

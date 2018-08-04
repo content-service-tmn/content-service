@@ -45,20 +45,15 @@
 <section class="home">
   <div class="home__grid">
     <div class="home__cell home__cell_left">
-
+      <div class="content">
+        <h2 class="content__heading">кейсы</h2>
+          <h3 class="content__subheading">мы создали это</h3>
+          <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
+          <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
+      </div>
     </div>
     <div class="home__cell home__cell_right">
       <div class="cases">
-        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
-          <h1 class="case__heading">вольные угодья</h1>
-          <p class="case__text">разработка сайта</p>
-          <a href="" class="case__link"></a>
-        </div>
-        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
-          <h1 class="case__heading">вольные угодья</h1>
-          <p class="case__text">разработка сайта</p>
-          <a href="" class="case__link"></a>
-        </div>
         <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
           <h1 class="case__heading">вольные угодья</h1>
           <p class="case__text">разработка сайта</p>
