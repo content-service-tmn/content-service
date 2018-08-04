@@ -55,3 +55,36 @@
     line-height: 1.5;
   }
 }
+
+.customers {
+  &__heading {
+    text-align: center;
+    padding:100px 60px 60px 60px;
+    @media(min-width:1440px) {
+      padding-bottom:100px;
+      padding-top:200px
+    }
+  }
+  &__grid {
+    display:flex;
+    flex-wrap:wrap;
+  }
+  &__cell {
+    box-sizing: border-box;
+    width:33.3333%;
+  }
+}
+.customer {
+  height:250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position:relative;
+  &__link {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+  }
+}

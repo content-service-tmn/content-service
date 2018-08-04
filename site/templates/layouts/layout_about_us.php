@@ -1,4 +1,4 @@
-<section class="header header_about header_fixed">
+<section class="header header_about">
   <a href="#" class="burger"></a>
 </section>
 <section class="about">
@@ -52,12 +52,35 @@
                 12 дней среднее время создания сайта
               </p>
               <p>
-                45% максимальное увеличение продаж у нашего заказчика                 
+                45% максимальное увеличение продаж у нашего заказчика
               </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<section class="customers">
+  <h2 class="customers__heading">наши заказчики</h2>
+  <div class="customers__grid">
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-1.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-2.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-3.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-4.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-5.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-6.png')">
+      <a href="#" class="customer__link"></a>
     </div>
   </div>
 </section>
