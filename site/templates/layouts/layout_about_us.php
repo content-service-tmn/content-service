@@ -1,5 +1,5 @@
 <section class="header header_about">
-  <a href="#" class="burger"></a>
+  <a href="#contacts" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="about">
   <div class="about__grid">
