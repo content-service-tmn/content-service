@@ -82,5 +82,14 @@
     <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-6.png')">
       <a href="#" class="customer__link"></a>
     </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-1.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-2.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
+    <div class="customers__cell customer" style="background-image:url('<?=$config->urls->templates?>assets/img/service-3.png')">
+      <a href="#" class="customer__link"></a>
+    </div>
   </div>
 </section>
