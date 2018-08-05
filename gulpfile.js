@@ -28,7 +28,7 @@ var path = {
     src: {
         php: 'site/templates/**/*.php',
         js: 'site/templates/src/js/*.js',
-        less: 'site/templates/src/less/*.less',
+        less: 'site/templates/src/less/template.less',
         img: 'site/templates/src/img/**/*.*',
         uikit: {
           js: 'site/templates/src/uikit/js/**/*.js',

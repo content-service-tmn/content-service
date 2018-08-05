@@ -10,6 +10,35 @@
 
 <body>
 
+<div id="sidebar" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <a class="uk-offcanvas-close"></a>
+    <div class="uk-offcanvas-bar-inner sidebar">
+      <ul class="sidebar__items">
+        <li class="sidebar__item"><a href="#">главная</a></li>
+        <li class="sidebar__item"><a href="#">схема работы</a></li>
+        <li class="sidebar__item"><a href="#">услуги content service</a></li>
+        <li class="sidebar__item"><a href="#">кейсы</a></li>
+        <li class="sidebar__item"><a href="#">об агенстве</a></li>
+        <li class="sidebar__item"><a href="#">бриф</a></li>
+        <li class="sidebar__item"><a href="#">контакты</a></li>
+      </ul>
+      <ul class="sidebar__items sidebar__items_contacts">
+        <li class="sidebar__item"><a href="#">оставить заявку</a></li>
+        <li class="sidebar__item"><a href="tel:+7961999900">+7961999900</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="callback" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <a class="uk-offcanvas-close"></a>
+    <div class="uk-offcanvas-bar-inner callback">
+      <h2 class="callback__heading">оставить заявку</h2>
+    </div>
+  </div>
+</div>
+
 <div class="layout">
   <div class="layout__left-bar">
     <div class="hello">
@@ -81,6 +110,7 @@
     </div>
   </div>
 </div>
+
 
 <?php endif; ?>
 
