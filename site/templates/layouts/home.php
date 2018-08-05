@@ -1,32 +1,75 @@
 <?php namespace Processwire;?>
 
+<section class="header header_fixed">
+  <a href="#callback" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
+</section>
+<section class="home">
+  <div class="home__grid">
+    <div class="home__cell home__cell_left">
+      <div class="aside">
+        <h1 class="aside__hello">hello</h1>
+        <h2 class="aside__name">content service</h2>
+        <p class="aside__slogan">Создаём прибыльные системы продаж в интернете</p>
+        <div class="aside__button">
+          <a href="#" class="button">заполнить бриф</a>
+        </div>
+      </div>
+    </div>
+    <div class="home__cell home__cell_right">
+      <div class="services">
+        <div class="services__grid">
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-1.png')">
+            <a href="" class="services__link"></a>
+            <h3 class="services__text">Разработка рекламной кампании</h3>
+          </div>
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-2.png')">
+            <a href="" class="services__link"></a>
+          </div>
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-3.png')">
+            <a href="" class="services__link"></a>
+          </div>
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-4.png')">
+            <a href="" class="services__link"></a>
+          </div>
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-5.png')">
+            <a href="" class="services__link"></a>
+          </div>
+          <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/service-6.png')">
+            <a href="" class="services__link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="home">
+  <div class="home__grid">
+    <div class="home__cell home__cell_left">
+      <div class="content">
+        <h2 class="content__heading">кейсы</h2>
+          <h3 class="content__subheading">мы создали это</h3>
+          <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
+          <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
+      </div>
+    </div>
+    <div class="home__cell home__cell_right">
+      <div class="cases">
+        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+          <h1 class="case__heading">вольные угодья</h1>
+          <p class="case__text">разработка сайта</p>
+          <a href="" class="case__link"></a>
+        </div>
+        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+          <h1 class="case__heading">вольные угодья</h1>
+          <p class="case__text">разработка сайта</p>
+          <a href="" class="case__link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="container_flex container_large">
-	<section class="aside">
-
-			<div class="header">
-				<div class="logo">
-					<img src="">
-				</div>
-				<div class="burger">
-					<a href="" class="burger_btn"></a>
-				</div>
-			</div>
-
-			<h1 class="aside__hello">Hello</h1>
-			<h2 class="aside__name">Content service</h2>
-			<p class="aside__slogan">Создаем прибыльные системы продаж в интернете</p>
-			<div class="aside__brief">
-				<a href="" class="aside__btn">Заполнить бриф</a>
-			</div>
-
-	</section>
-	<section class="amenities">
-		<ul class="service-list">
-            <?php foreach ($pages->find("template=layout_service") as $service): ?>
-			<li class="item"><a href="#" class="item__link" style='background-image: url("<?=$service->service_image->url?>")'></a>
-			</li>
-            <?php endforeach; ?>
-		</ul>
-	</section>
-</div>
+<?php foreach ($pages->find("template=layout_service") as $service): ?>
+    <li class="item"><a href="#" class="item__link" style='background-image: url("<?=$service->service_image->url?>")'></a>
+    </li>
+<?php endforeach; ?>

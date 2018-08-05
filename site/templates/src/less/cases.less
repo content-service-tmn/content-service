@@ -1,0 +1,50 @@
+.cases {
+  //`overflow-x:scroll;
+  &__case {
+    box-sizing: border-box;
+    width:50%;
+    display:inline-block;
+    float:left;
+  }
+}
+
+.case {
+  position:relative;
+  height:100vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__heading {
+    color:white;
+    position:absolute;
+    padding:0 20px;
+    left:0px;
+    right:0px;
+    bottom:300px;
+    transform:translateY(100%);
+    @media(min-width: 1920px) {
+      padding:0 60px;
+    }
+  }
+  &__text {
+    color:white;
+    font-weight: 700;
+    padding:0 20px;
+    position:absolute;
+    left:0px;
+    right:0px;
+    bottom:150px;
+    transform:translateY(100%);
+    text-transform: uppercase;
+    @media(min-width: 1920px) {
+      padding:0 60px;
+    }
+  }
+  &__link {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+  }
+}

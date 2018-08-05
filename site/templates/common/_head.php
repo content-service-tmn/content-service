@@ -21,8 +21,17 @@
   $css = AIOM::CSS(array(
     'assets/css/template.css'
   ));
-  // $js = AIOM::JS(array(
-  //   "assets/js/template.js"
-  // ));
+  $js = AIOM::JS(array(
+    "assets/js/core/core.js",
+    "assets/js/core/modal.js",
+    "assets/js/core/utility.js",
+    "assets/js/core/offcanvas.custom.js",
+    "assets/js/core/smooth-scroll.js",
+    "assets/js/components/lightbox.js",
+    "assets/js/components/notify.js",
+    "assets/js/components/accordion.js",
+    "assets/js/template.js"
+  ));
 ?>
 <link rel="stylesheet" type="text/css" href="<?= $css; ?>">
+<script src="<?= $js; ?>"></script>
