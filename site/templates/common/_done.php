@@ -30,6 +30,14 @@
     </div>
   </div>
 </div>
+<div id="callback" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <a class="uk-offcanvas-close"></a>
+    <div class="uk-offcanvas-bar-inner callback">
+      <h2 class="callback__heading">оставить заявку</h2>
+    </div>
+  </div>
+</div>
 
 <div class="layout">
   <div class="layout__left-bar">
