@@ -21,7 +21,7 @@
             <?php foreach ($pages->find("template=layout_service") as $service): ?>
                 <div class="services__cell" style="background-image:url('<?=$service->service_image->url?>')">
                     <a href="" class="services__link"></a>
-                    <h3 class="services__text">"<?=$service->service_title?>"</h3>
+                    <h3 class="services__text"><?=$service->service_title?></h3>
                 </div>
             <?php endforeach; ?>
         </div>
