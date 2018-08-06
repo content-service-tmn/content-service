@@ -77,77 +77,24 @@
                 </ul>
             </div>
         </div>
+
+
         <div class="work__cell work__cell_right">
             <div class="content">
                 <h2 class="content__heading">схема работы</h2>
-                <?php foreach ($page->work_steps as $step): ?>
                 <div class="uk-accordion work__accordion" data-uk-accordion>
-                <h3 class="content__subheading"><?= $step->work_title ?></h3>
-                    <div class="uk-accordion-content">
-                    <?php foreach ($step->work_content as $content): ?>
-                        <p><span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span></p>
-                        <p class="content__description"><?= $content->work_text ?></p>
+                    <?php foreach ($page->work_steps as $step): ?>
+                        <h3 class="uk-accordion-title"><?= $step->work_title ?></h3>
+                        <div class="uk-accordion-content">
+                            <?php foreach ($step->work_content as $content): ?>
+                                <p>
+                                    <span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span>
+                                </p>
+                                <p class="content__description"><?= $content->work_text ?></p>
+                            <?php endforeach; ?>
+                        </div>
                     <?php endforeach; ?>
-                    </div>
-                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="work__cell work__cell_right">
-      <div class="content">
-        <h2 class="content__heading">схема работы</h2>
-        <div class="uk-accordion work__accordion" data-uk-accordion>
-
-            <h3 class="uk-accordion-title">привлечение целевой аудитории</h3>
-            <div class="uk-accordion-content">
-              <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- таргетированная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- SEO</span></p>
-              <p class="content__description">(комплекс мероприятий по увеличению видимости сайта в поисковых системах по целевым)</p>
-            </div>
-            <h3 class="uk-accordion-title">повышение лояльности</h3>
-            <div class="uk-accordion-content">
-              <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- таргетированная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- SEO</span></p>
-              <p class="content__description">(комплекс мероприятий по увеличению видимости сайта в поисковых системах по целевым)</p>
-            </div>
-            <h3 class="uk-accordion-title">удержание посетителей</h3>
-            <div class="uk-accordion-content">
-              <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- таргетированная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- SEO</span></p>
-              <p class="content__description">(комплекс мероприятий по увеличению видимости сайта в поисковых системах по целевым)</p>
-            </div>
-            <h3 class="uk-accordion-title">возврат и дожим</h3>
-            <div class="uk-accordion-content">
-              <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- таргетированная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- SEO</span></p>
-              <p class="content__description">(комплекс мероприятий по увеличению видимости сайта в поисковых системах по целевым)</p>
-            </div>
-            <h3 class="uk-accordion-title">аналитика и учёт</h3>
-            <div class="uk-accordion-content">
-              <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- таргетированная реклама</span></p>
-              <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-              <p><span class="content__quote content__quote_case">- SEO</span></p>
-              <p class="content__description">(комплекс мероприятий по увеличению видимости сайта в поисковых системах по целевым)</p>
-            </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
