@@ -16,16 +16,16 @@
     <div class="uk-offcanvas-bar-inner sidebar">
       <ul class="sidebar__items">
         <li class="sidebar__item"><a href="#">главная</a></li>
-        <li class="sidebar__item"><a href="#">схема работы</a></li>
-        <li class="sidebar__item"><a href="#">услуги content service</a></li>
-        <li class="sidebar__item"><a href="#">кейсы</a></li>
-        <li class="sidebar__item"><a href="#">об агенстве</a></li>
-        <li class="sidebar__item"><a href="#">бриф</a></li>
-        <li class="sidebar__item"><a href="#">контакты</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_work")->url?>">схема работы</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_service")->url?>">услуги content service</a></li>
+        <li class="sidebar__item"><a href="#cases">кейсы</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_about_us")->url?>">об агенстве</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_brief-check")->url?>">бриф</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_contacts")->url?>">контакты</a></li>
       </ul>
       <ul class="sidebar__items sidebar__items_contacts">
-        <li class="sidebar__item"><a href="#">оставить заявку</a></li>
-        <li class="sidebar__item"><a href="tel:+7961999900">+7961999900</a></li>
+        <li class="sidebar__item"><a href="#callback">оставить заявку</a></li>
+        <li class="sidebar__item"><a href="tel:<?=phoneLink($pages->get("template=layout_contacts")->contacts_phone)?>"><?=$pages->get("template=layout_contacts")->contacts_phone?></a></li>
       </ul>
     </div>
   </div>
