@@ -1,0 +1,162 @@
+.brief{
+  max-width: 1920px;
+  max-height: 1080px;
+  padding-left: 60px;
+  justify-content: space-between;
+  display: flex;
+
+  &__main{
+    width: 70%;
+    padding-top: 60px;
+  }
+
+  &__title_padding{
+    padding-top: 100px;
+  }
+
+  &__bg{
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__wrap{
+    padding-top: 100px;
+  }
+
+  .brief__wrap_margin{
+    padding-top: 200px;
+  }
+
+  &__begin{
+    margin-bottom: 60px;
+    font-size: 48px;
+    color: transparent;
+    -webkit-text-stroke: 1px @color-main-btn;
+    -moz-text-stroke: 1px @color-main-btn;
+    text-stroke: 1px @color-main-btn;
+  }
+
+  &__title{
+    margin-bottom: 60px;
+    font-size: 48px;
+  }
+
+  &__title_margin{
+
+  }
+
+}
+
+.brief__disabled{
+  display: none;
+}
+
+.form{
+  font-size: 24px;
+
+  &__item{
+    margin-bottom: 30px;
+    line-height: 30px;
+  }
+
+
+  &__text{
+    min-width: 600px;
+    font-size: 48px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid @color-brief-text;
+    background: none;
+    color: @color-brief-text;
+  }
+
+  &__text_multiline{
+    font-size: 24px;
+    padding: 0;
+    min-height: 50px;
+  }
+}
+
+  .submit{
+    margin-top: 60px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: @color-brief-submit;
+    cursor: pointer;
+  }
+
+// BRIEF ADAPTIVE
+
+@media(max-width:1024px){
+  .brief{
+
+    &__bg{
+      display: none;
+    }
+
+    &__main{
+      width: 100%;
+    }
+  }
+}
+
+
+// Поставьте нужную ширину!
+@media(max-width:680px){
+
+  .brief{
+
+  padding: 30px;
+
+  &__wrap{
+    padding-top: 30px;
+  }
+
+  .brief__wrap_margin{
+    padding-top: 30px;
+  }
+
+  &__main{
+    padding-top: 0;
+  }
+
+  &__begin{
+    margin-bottom: 30px;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+
+  .burger_btn{
+    width: 50px;
+    height: 50px;
+  }
+
+    &__title{
+      font-size: 24px;
+  }
+
+  &__begin{
+  font-size: 24px;
+  }
+}
+
+//   .form{
+//     font-size: 12px;
+//
+//   &__text{
+//     font-size: 24px;
+//   }
+// }
+
+  .submit{
+    font-size: 14px;
+  }
+
+
+}
