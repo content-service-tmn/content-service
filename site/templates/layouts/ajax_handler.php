@@ -26,14 +26,15 @@ if ($config->ajax) {
         }
         $m->body($messageBody . "ответы на бриф: \r\n" . $briefBody);
     }
-    $data = $_REQUEST["data"];
-    if ($data["name"] && $data["phone"]) {
-        $name = $sanitizer->text($data["name"]);
-        $phone = $sanitizer->text($data["phone"]);
-        $message = "Имя: {$name}, телефон: {$phone}.";
-        $m->body($messageBody . $message);
+    if (isset($_REQUEST["data"])) {
+        $data = $_REQUEST["data"];
+        if ($data["name"] && $data["phone"]) {
+            $name = $sanitizer->text($data["name"]);
+            $phone = $sanitizer->text($data["phone"]);
+            $message = "Имя: {$name}, телефон: {$phone}.";
+            $m->body($messageBody . $message);
+        }
     }
-
 
     if ($m->body != ""){
         if ($m->send() != 0) {
