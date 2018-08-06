@@ -1,3 +1,9 @@
+<?php
+namespace Processwire;
+bd($pages->find("template=layout_service, id<".$page->id."sort=id"));
+bd($pages->find("template=layout_service, id>".$page->id."sort=id"));
+?>
+
 <section class="header">
   <a href="#" class="burger"></a>
 </section>
@@ -5,7 +11,7 @@
   <div class="service__grid">
     <div class="service__cell service__cell_left">
       <div class="content">
-        <h2 class="content__heading"><?=$page->title?></h2>
+        <h2 class="content__heading"><?=$page->service_title?></h2>
           <ul class="content__text">
            <?=$page->service_content?>
           </ul>
@@ -15,8 +21,12 @@
             <a href="" class="button">рассчитать стоимость</a>
           </div>
         <ul class="content__items">
-          <li class="content__item"><a href="" class="content__link content__link_left">ведение соц. сетей</a></li>
-          <li class="content__item"><a href="" class="content__link content__link_right">контекстная реклама</a></li>
+            <?php $prevs = $pages->find("template=layout_service, id<".$page->id."sort=id"); if($prevs->count>0): ?>
+          <li class="content__item"><a href="<?=$prevs[$prevs->count-1]->url?>" class="content__link content__link_left"><?=$prevs[$prevs->count-1]->title?></a></li>
+            <?php endif; ?>
+            <?php $nexts = $pages->find("template=layout_service, id>".$page->id."sort=id"); if($nexts->count>0): ?>
+            <li class="content__item"><a href="<?=$nexts[0]->url?>" class="content__link content__link_right"><?=$nexts[0]->title?></a></li>
+            <?php endif; ?>
         </ul>
       </div>
     </div>
