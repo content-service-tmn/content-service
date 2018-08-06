@@ -2,11 +2,7 @@
 namespace Processwire;
 if ($config->ajax) {
     $m = $mail->new();
-    if ($name == "test") {
-        $m->to("gekirko@yandex.ru");
-    } else {
-        $m->to($page->ajax_email_for_callback);
-    }
+    $m->to($page->ajax_email_for_callback);
     $m->from('bot@ck06258.tmweb.ru')
         ->fromName("Content-service")
         ->subject('Обращение с сайта');
@@ -37,6 +33,7 @@ if ($config->ajax) {
         $message = "Имя: {$name}, телефон: {$phone}.";
         $m->body($messageBody . $message);
     }
+
 
     if ($m->body != ""){
         if ($m->send() != 0) {
