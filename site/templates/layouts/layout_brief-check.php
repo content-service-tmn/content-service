@@ -1,7 +1,6 @@
 <section id="current_quest" class="brief">
 </section>
 
-<?php
 <!-- <?php
 function continueButtonContent($next)
 {
