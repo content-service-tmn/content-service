@@ -229,3 +229,21 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
     <div class="brief__cell brief__cell_right" style="background-image:url('<?=$config->urls->templates?>assets/img/brief.png')"></div>
   </div>
 </section>
+
+<form class="brief__form form">
+  <div class="form__element form__element_brief">
+    <label class="label" for="name1">Имя</label>
+    <input id="name1" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+  <div class="form__element form__element_brief">
+    <label class="label" for="name2">Телефон</label>
+    <input id="name2" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+</form>
+
+<form class="brief__form form form_big">
+  <div class="form__textarea form__element_brief">
+    <label class="label" for="text">Здесь вы можете написать отличие вашего бренда</label>
+    <textarea id="text" class="input input_outline js-input" rows="1"></textarea>
+  </div>
+</form>
