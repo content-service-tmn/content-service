@@ -29,7 +29,7 @@
         </div>
     </div>
 </section>
-<section class="home">
+<section id="cases" class="home">
     <div class="home__grid">
         <div class="home__cell home__cell_left">
             <div class="content">

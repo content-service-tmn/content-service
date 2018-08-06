@@ -69,11 +69,9 @@
                     </g>
                 </svg>
                 <ul class="pyramid__list">
-                    <li class="pyramid__item">привлечение целевой аудитории</li>
-                    <li class="pyramid__item">повышение лояльности</li>
-                    <li class="pyramid__item">удержание посетителей</li>
-                    <li class="pyramid__item">возврат и дожим</li>
-                    <li class="pyramid__item">аналитика и учет</li>
+                    <?php foreach ($page->work_steps as $step): ?>
+                    <li class="pyramid__item"><?= $step->work_title ?></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
