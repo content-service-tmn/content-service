@@ -2,6 +2,7 @@
 </section>
 
 <?php
+<!-- <?php
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";
@@ -144,7 +145,7 @@ var answers = {};
 $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 </script>"
 
-?>
+?> -->
 
 <script>
     //    $(".form-radios").not("brief__disabled").on("submit", function (e) {
@@ -279,7 +280,111 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
             }
         });
     }
+<!-- <script>
+    $(".form-radios").not("brief__disabled").on("submit", function (e) {
+        var prevSection = $(this).closest("section");
+        var answer = $("input:checked");
+        if (answer[0] != undefined) {
+            var answerId = answer[0]["dataset"]["next"];
+            answers[$(prevSection).find(".brief__title")[0]["innerHTML"]] = answer.next("label")[0]["innerText"];
+            console.log( answer.next("label")[0]["innerText"]);
+            $("#" + answerId).removeClass("brief__disabled");
+            $(prevSection).addClass("brief__disabled");
+            answer.prop('checked', false);
+        }
+        e.preventDefault();
+    });
 
+    $(".submit").on("click", function (e) {
+        var prevSection = $(this).closest("section");
+        var innerAnswers = {};
+        var hasError = false;
+        $(prevSection).find(".brief-form__text").each(function () {
+            var regex = new RegExp($(this).attr("data-validator"));
+            if (!regex.test($(this).val())){
+                $(this).addClass("error");
+                hasError = true;
+            }
+            innerAnswers[$(this).attr("placeholder")] = $(this)[0].value;
+        });
+        if (hasError) {
+            return false;
+        }
+        answers[$(prevSection).find(".brief__title")[0]["innerHTML"]] = innerAnswers;
+        var answer_id = $(this).attr("data-next");
+        if (answer_id) {
+            $("#" + answer_id).removeClass("brief__disabled");
+            $(prevSection).addClass("brief__disabled");
+        } else {
+            $.ajax({
+                url: "<?=$pages->find("template=ajax_handler")->first()->url?>",
+                type: 'POST',
+                data: {answers :answers},
+                success: function (result) {
+                    console.log(result);
+                }
+
+            });
+        }
+        e.preventDefault();
+    })
+</script> -->
+
+<section class="header">
+  <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
+</section>
+<section class="brief">
+  <div class="brief__grid">
+    <div class="brief__cell brief__cell_left">
+      <div class="content">
+        <h2 class="content__heading content__heading_white">заполнить бриф</h2>
+          <h2 class="brief__subheading">чем мы можем быть вам полезны?</h2>
+          <form class="brief__form form">
+              <div class="form__radio">
+                  <input type="radio" name="question" id="one">
+                  <label for="one">создать систему продаж в интернете</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="two">
+                  <label for="two">создать сайт</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="three">
+                  <label for="three">настроить рекламу в интернете</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="four">
+                  <label for="four">вести социальные сети</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="five">
+                  <label for="five">разработать фирменный стиль</label>
+              </div>
+          </form>
+          <div class="brief__submit submit">далее</div>
+      </div>
+    </div>
+    <div class="brief__cell brief__cell_right" style="background-image:url('<?=$config->urls->templates?>assets/img/brief.png')"></div>
+  </div>
+</section>
+
+<form class="brief__form form">
+  <div class="form__element form__element_brief">
+    <label class="label" for="name1">Имя</label>
+    <input id="name1" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+  <div class="form__element form__element_brief">
+    <label class="label" for="name2">Телефон</label>
+    <input id="name2" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+</form>
+
+<form class="brief__form form form_big">
+  <div class="form__textarea form__element_brief">
+    <label class="label" for="text">Здесь вы можете написать отличие вашего бренда</label>
+    <textarea id="text" class="input input_outline js-input" rows="1"></textarea>
+  </div>
+</form>
     function buildText(node) {
         var current = $("#current_quest");
         current.html($("#brief_text").html());
