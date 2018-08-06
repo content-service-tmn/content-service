@@ -25,7 +25,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 <form class="brief__form form">
                     <div class="form__element form__element_brief">
                         <label class="label" for="namepattern_id">pattern_text</label>
-                        <input id="namepattern_id" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name" value="">
+                        <input id="namepattern_id" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name">
                     </div>
                 </form>
                 <div class="brief__submit submit">далее</div>
@@ -38,7 +38,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
         <form class="brief__form form form_big">
             <div class="form__textarea form__element_brief">
                 <label class="label" for="text">pattern_text</label>
-                <textarea id="text" class="input input_outline js-input" rows="1"></textarea>
+                <textarea id="text" data-title="pattern_text" class="input input_outline js-input brief-form__text" rows="1"></textarea>
             </div>
         </form>
         <div class="brief__submit submit">далее</div>
@@ -99,14 +99,12 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var innerAnswers = {};
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
-                console.log(this);
                 var regex = new RegExp($(this).attr("data-validator"));
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
                     hasError = true;
                 }
                 innerAnswers[$(this).attr("data-title")] = $(this)[0].value;
-                console.log($(this).value);
             });
             if (hasError) {
                 return false;
@@ -116,49 +114,59 @@ $brief_content = file_get_contents($page->brief_data->filename);
             if (node.variables[0].next) {
                 buildNode(node.variables[0].next, currentid);
             } else {
-                console.log("ajax");
-                console.log(answers);
-//                $.ajax({
-//                    url: "<?//=$pages->find("template=ajax_handler")->first()->url?>//",
-//                    type: 'POST',
-//                    data: {answers: answers},
-//                    success: function (result) {
-//                        console.log(result);
-//                    }
-//
-//                });
+                $.ajax({
+                    url: "<?=$pages->find("template=ajax_handler")->first()->url?>",
+                    type: 'POST',
+                    data: {answers: answers},
+                    success: success,
+                    error: error
+                });
             }
-        })
+        });
 
     }
 
-    function buildMultiply(node) {
+    function buildMultiply(node, currentid) {
         var current = $("#current_quest");
         current.html($("#brief_multiply").html());
 
-        current.html(current.html().replace("pattern_title", node.title));
+        current.html(current.html().replace(/pattern_title/g, node.title));
         var item = current.find("form");
         var item_html = item.html();
         var variables = "";
         node.variables.forEach(function (item) {
-            variables += item_html.replace("pattern_text", item.vartitle);
+            variables += item_html.replace(/pattern_text/g, item.vartitle);
         });
         item.html(variables);
-        if (node.variables[0].next) {
-            buildNode(node.variables[0].next, current);
-        } else {
-            console.log("ajax");
-            console.log(answers);
-//                $.ajax({
-//                    url: "<?//=$pages->find("template=ajax_handler")->first()->url?>//",
-//                    type: 'POST',
-//                    data: {answers: answers},
-//                    success: function (result) {
-//                        console.log(result);
-//                    }
-//
-//                });
-        }
+
+        $(".submit").on("click", function () {
+            var innerAnswers = {};
+            var hasError = false;
+            $(current).find(".brief-form__text").each(function () {
+                var regex = new RegExp($(this).attr("data-validator"));
+                if (!regex.test($(this).val())) {
+                    $(this).addClass("error");
+                    hasError = true;
+                }
+                innerAnswers[$(this).attr("data-title")] = $(this)[0].value;
+            });
+            if (hasError) {
+                return false;
+            }
+            answers[node.title] = innerAnswers;
+
+            if (node.variables[0].next) {
+                buildNode(node.variables[0].next, currentid);
+            } else {
+                $.ajax({
+                    url: "<?=$pages->find("template=ajax_handler")->first()->url?>",
+                    type: 'POST',
+                    data: {answers: answers},
+                    success: success,
+                    error: error
+                });
+            }
+        });
     }
 
     function buildNode(node, currentid) {
@@ -171,7 +179,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 buildText(node, currentid);
                 break;
             case "textarea":
-                buildMultiply(node);
+                buildMultiply(node, currentid);
                 break;
         }
 
@@ -180,5 +188,23 @@ $brief_content = file_get_contents($page->brief_data->filename);
     var answers = {};
     buildNode(<?=$brief_content?>, 0);
 
+
+    function success(result) {
+        UIkit.offcanvas.hide([force = false]);
+        UIkit.notify({
+            message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+            status: result,
+            timeout: 3000,
+            pos: 'bottom-center'
+        });
+    }
+    function error(result) {
+        UIkit.notify({
+            message: 'Ошибка отправки сообщения',
+            status: 'warning',
+            timeout: 3000,
+            pos: 'bottom-center'
+        });
+    }
 </script>
 
