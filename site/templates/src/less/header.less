@@ -2,31 +2,30 @@
   z-index:999;
   display:flex;
   position:absolute;
-  top:60px;
-  left:60px;
-  right:60px;
+  top:0;
+  left:0;
+  right:0;
+  padding:60px 60px 0 60px;
   @media(max-width:767px) {
-    top:20px;
-    left:20px;
-    right:20px;
+    padding:20px 20px 0 20px;
     justify-content: flex-end;
   }
   &_fixed {
     position:fixed;
   }
   &_work {
-    padding-left: 40%;
+    left:40%;
     @media(min-width: 1440px) {
-      padding-left: 50%;
+      left: 50%;
     }
   }
   &_contacts {
-    padding-left: 66.6667%;
+    left: 66.6667%;
   }
   &_about {
-    padding-left:33.3333%;
+    left:33.3333%;
     @media(min-width: 1920px) {
-      padding-left: 50%;
+      left: 50%;
     }
   }
 }

@@ -41,15 +41,15 @@
     </div>
     <div class="home__cell home__cell_right">
       <div class="cases">
-        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
-          <h1 class="case__heading">вольные угодья</h1>
-          <p class="case__text">разработка сайта</p>
-          <a href="" class="case__link"></a>
+        <div class="cases__case case-block" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+          <h1 class="case-block__heading">вольные угодья</h1>
+          <p class="case-block__text">разработка сайта</p>
+          <a href="" class="case-block__link"></a>
         </div>
-        <div class="cases__case case" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
-          <h1 class="case__heading">вольные угодья</h1>
-          <p class="case__text">разработка сайта</p>
-          <a href="" class="case__link"></a>
+        <div class="cases__case case-block" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+          <h1 class="case-block__heading">вольные угодья</h1>
+          <p class="case-block__text">разработка сайта</p>
+          <a href="" class="case-block__link"></a>
         </div>
       </div>
     </div>
