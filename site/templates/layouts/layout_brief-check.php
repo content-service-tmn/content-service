@@ -95,7 +95,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             variables += item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
         });
         item.html(variables);
-        $(".submit").on("click", function (e) {
+        $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
@@ -198,7 +198,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             pos: 'bottom-center'
         });
     }
-    function error(result) {
+    function error() {
         UIkit.notify({
             message: 'Ошибка отправки сообщения',
             status: 'warning',
