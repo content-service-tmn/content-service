@@ -81,12 +81,15 @@
             <div class="content">
                 <h2 class="content__heading">схема работы</h2>
                 <?php foreach ($page->work_steps as $step): ?>
-                    <h3 class="content__subheading"><?= $step->work_title ?></h3>
+                <div class="uk-accordion work__accordion" data-uk-accordion>
+                <h3 class="content__subheading"><?= $step->work_title ?></h3>
+                    <div class="uk-accordion-content">
                     <?php foreach ($step->work_content as $content): ?>
                         <p><span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span></p>
                         <p class="content__description"><?= $content->work_text ?></p>
                     <?php endforeach; ?>
-                <?php endforeach; ?>
+                    </div>
+                    <?php endforeach; ?>
             </div>
         </div>
     </div>
