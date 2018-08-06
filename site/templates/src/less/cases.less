@@ -1,16 +1,18 @@
 .cases {
-  //`overflow-x:scroll;
+  height:100vh;
+  overflow-x:scroll;
+  display:flex;
   &__case {
     box-sizing: border-box;
-    width:50%;
     display:inline-block;
-    float:left;
+    flex-shrink:0;
   }
 }
 
-.case {
+.case-block {
   position:relative;
-  height:100vh;
+  height:100%;
+  width:50%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;

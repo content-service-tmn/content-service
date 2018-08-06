@@ -1,0 +1,27 @@
+@motul-gray:rgb(27,27,27);
+
+.case {
+
+  &__grid {
+    display:flex;
+    flex-wrap: wrap;
+  }
+  &__cell {
+    box-sizing: border-box;
+    width:50%;
+    &_text {
+      padding:90px;
+      *+* {
+        margin-top:30px;
+      }
+    }
+    &_motul-dark {
+      background-color:@motul-gray;
+      color:white;
+    }
+  }
+  &__img {
+    width: 100%;
+    display:block;
+  }
+}
