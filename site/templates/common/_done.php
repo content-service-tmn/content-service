@@ -35,7 +35,7 @@
     <a class="uk-offcanvas-close"></a>
     <div class="uk-offcanvas-bar-inner callback">
       <h2 class="callback__heading">оставить заявку</h2>
-      <form id="" class="callback__form form" action="/" method="post">
+      <form id="callback__form" class="callback__form form" action="/" method="post">
           <div class="form__element form__element_name">
             <label class="label" for="name">Имя</label>
             <input id="name" class="input input_outline js-input" type="text" name="name" value="">
