@@ -14,7 +14,7 @@
             <li>оптимизация под все мобильные устройства не дополнительная опция, а сама собой разумеющаяся!</li>
           </ul>
           <p><span class="content__quote content__quote_site">cайт нужен, чтобы он приносил заявки, а не для того, чтобы был</span></p>
-          <a href="" class="content__case">посмотреть кейсы</a>
+          <a href="" class="content__case content__case_site">посмотреть кейсы</a>
           <div class="content__button">
             <a href="" class="button">рассчитать стоимость</a>
           </div>
