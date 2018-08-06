@@ -19,7 +19,7 @@ function buildRadios($quest, $id)
                 <form class=\"form-radios\">";
     foreach ($quest->variables as $id_i => $variable) {
         $html .=
-            "<div class=\"form__item\">
+            "<div class=\"brief-form__item\">
                         <input type=\"radio\" name=\"question\"  data-next='{$variable->id}'>
                         <label for=\"one\">{$variable->vartitle}</label>
                     </div>";
@@ -43,9 +43,9 @@ function buildText($quest, $id)
         </div>
         <div class=\"brief__wrap brief__wrap_margin\">
             <h3 class=\"brief__title\">{$quest->title}</h3>
-            <form class=\"form\">";
+            <form class=\"brief-form\">";
     foreach ($quest->variables as $variable) {
-        $html .= "<input data-validator='{$variable->validator}' type=\"text\" name=\"text\" class=\"form__text\" placeholder=\"{$variable->vartitle}\">";
+        $html .= "<input data-validator='{$variable->validator}' type=\"text\" name=\"text\" class=\"brief-form__text\" placeholder=\"{$variable->vartitle}\">";
     }
     $html .= "</form>
             <div data-next='{$next}' class=\"submit\">" . continueButtonContent($next) . "</div>
@@ -66,10 +66,10 @@ function buildMultiline($quest, $id)
         </div>
         <div class=\"brief__wrap brief__wrap_margin\">
             <h3 class=\"brief__title\">{$quest->title}</h3>
-            <form class=\"form\">";
+            <form class=\"brief-form\">";
     if (isset($quest->variables)) {
         foreach ($quest->variables as $variable) {
-            $html .= "<textarea data-validator='{$variable->validator}' class=\"form__text form__text_multiline\" rows=\"1\" placeholder='{$variable->vartitle}'></textarea>";
+            $html .= "<textarea data-validator='{$variable->validator}' class=\"brief-form__text brief-form__text_multiline\" rows=\"1\" placeholder='{$variable->vartitle}'></textarea>";
         }
     }
     $html .= "</form>
@@ -161,7 +161,7 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
         var prevSection = $(this).closest("section");
         var innerAnswers = {};
         var hasError = false;
-        $(prevSection).find(".form__text").each(function () {
+        $(prevSection).find(".brief-form__text").each(function () {
             var regex = new RegExp($(this).attr("data-validator"));
             if (!regex.test($(this).val())){
                 $(this).addClass("error");
@@ -199,7 +199,7 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 <!--        <div class="brief__wrap brief__wrap_margin">-->
 <!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
 <!--            <form class="form">-->
-<!--                <input type="text" name="text" class="form__text" placeholder="НАЗВАНИЕ">-->
+<!--                <input type="text" name="text" class="brief-form__text" placeholder="НАЗВАНИЕ">-->
 <!--            </form>-->
 <!--            <div class="submit">Далее</div>-->
 <!--        </div>-->
@@ -216,7 +216,7 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 <!--        <div class="brief__wrap brief__wrap_margin">-->
 <!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
 <!--            <form class="form">-->
-<!--                <textarea class="form__text form__text_multiline" rows="1"></textarea>-->
+<!--                <textarea class="brief-form__text brief-form__text_multiline" rows="1"></textarea>-->
 <!--            </form>-->
 <!--            <div class="submit">Далее</div>-->
 <!--        </div>-->
@@ -233,23 +233,23 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 <!--            <h4 class="brief__begin">Заполнить бриф</h4>-->
 <!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
 <!--            <form class="form">-->
-<!--                <div class="form__item">-->
+<!--                <div class="brief-form__item">-->
 <!--                    <input type="radio" name="question" id="one">-->
 <!--                    <label for="one">создать систему продаж в интернете</label>-->
 <!--                </div>-->
-<!--                <div class="form__item">-->
+<!--                <div class="brief-form__item">-->
 <!--                    <input type="radio" name="question" id="two">-->
 <!--                    <label for="two">создать сайт</label>-->
 <!--                </div>-->
-<!--                <div class="form__item">-->
+<!--                <div class="brief-form__item">-->
 <!--                    <input type="radio" name="question" id="three">-->
 <!--                    <label for="three">настроить рекламу в интернете</label>-->
 <!--                </div>-->
-<!--                <div class="form__item">-->
+<!--                <div class="brief-form__item">-->
 <!--                    <input type="radio" name="question" id="four">-->
 <!--                    <label for="four">вести социальные сети</label>-->
 <!--                </div>-->
-<!--                <div class="form__item">-->
+<!--                <div class="brief-form__item">-->
 <!--                    <input type="radio" name="question" id="five">-->
 <!--                    <label for="five">разработать фирменный стиль</label>-->
 <!--                </div>-->
