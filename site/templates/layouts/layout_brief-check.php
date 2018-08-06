@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 function continueButtonContent($next)
 {
     return $next ? "Далее" : "Отправить";
@@ -140,9 +140,9 @@ var answers = {};
 $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
 </script>"
 
-?>
+?> -->
 
-<script>
+<!-- <script>
     $(".form-radios").not("brief__disabled").on("submit", function (e) {
         var prevSection = $(this).closest("section");
         var answer = $("input:checked");
@@ -190,72 +190,60 @@ $(\"#{$briefs->id}\").removeClass(\"brief__disabled\")
         }
         e.preventDefault();
     })
-</script>
-<!--<section class="brief">-->
-<!--    <div class="brief__main">-->
-<!--        <div class="burger">-->
-<!--            <a href="#" class="burger_btn">1</a>-->
-<!--        </div>-->
-<!--        <div class="brief__wrap brief__wrap_margin">-->
-<!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
-<!--            <form class="form">-->
-<!--                <input type="text" name="text" class="brief-form__text" placeholder="НАЗВАНИЕ">-->
-<!--            </form>-->
-<!--            <div class="submit">Далее</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="brief__bg" style="background-image: url('');"></div>-->
-<!--</section>-->
-<!---->
-<!---->
-<!--<section class="brief">-->
-<!--    <div class="brief__main">-->
-<!--        <div class="burger">-->
-<!--            <a href="#" class="burger_btn">1</a>-->
-<!--        </div>-->
-<!--        <div class="brief__wrap brief__wrap_margin">-->
-<!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
-<!--            <form class="form">-->
-<!--                <textarea class="brief-form__text brief-form__text_multiline" rows="1"></textarea>-->
-<!--            </form>-->
-<!--            <div class="submit">Далее</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="brief__bg" style="background-image: url('');"></div>-->
-<!--</section>-->
-<!---->
-<!--<section class="brief">-->
-<!--    <div class="brief__main">-->
-<!--        <div class="burger">-->
-<!--            <a href="#" class="burger_btn">1</a>-->
-<!--        </div>-->
-<!--        <div class="brief__wrap">-->
-<!--            <h4 class="brief__begin">Заполнить бриф</h4>-->
-<!--            <h3 class="brief__title">Чем мы можем быть вам полезны?</h3>-->
-<!--            <form class="form">-->
-<!--                <div class="brief-form__item">-->
-<!--                    <input type="radio" name="question" id="one">-->
-<!--                    <label for="one">создать систему продаж в интернете</label>-->
-<!--                </div>-->
-<!--                <div class="brief-form__item">-->
-<!--                    <input type="radio" name="question" id="two">-->
-<!--                    <label for="two">создать сайт</label>-->
-<!--                </div>-->
-<!--                <div class="brief-form__item">-->
-<!--                    <input type="radio" name="question" id="three">-->
-<!--                    <label for="three">настроить рекламу в интернете</label>-->
-<!--                </div>-->
-<!--                <div class="brief-form__item">-->
-<!--                    <input type="radio" name="question" id="four">-->
-<!--                    <label for="four">вести социальные сети</label>-->
-<!--                </div>-->
-<!--                <div class="brief-form__item">-->
-<!--                    <input type="radio" name="question" id="five">-->
-<!--                    <label for="five">разработать фирменный стиль</label>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--            <div class="submit">Далее</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!---->
+</script> -->
+
+<section class="header">
+  <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
+</section>
+<section class="brief">
+  <div class="brief__grid">
+    <div class="brief__cell brief__cell_left">
+      <div class="content">
+        <h2 class="content__heading content__heading_white">заполнить бриф</h2>
+          <h2 class="brief__subheading">чем мы можем быть вам полезны?</h2>
+          <form class="brief__form form">
+              <div class="form__radio">
+                  <input type="radio" name="question" id="one">
+                  <label for="one">создать систему продаж в интернете</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="two">
+                  <label for="two">создать сайт</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="three">
+                  <label for="three">настроить рекламу в интернете</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="four">
+                  <label for="four">вести социальные сети</label>
+              </div>
+              <div class="form__radio">
+                  <input type="radio" name="question" id="five">
+                  <label for="five">разработать фирменный стиль</label>
+              </div>
+          </form>
+          <div class="brief__submit submit">далее</div>
+      </div>
+    </div>
+    <div class="brief__cell brief__cell_right" style="background-image:url('<?=$config->urls->templates?>assets/img/brief.png')"></div>
+  </div>
+</section>
+
+<form class="brief__form form">
+  <div class="form__element form__element_brief">
+    <label class="label" for="name1">Имя</label>
+    <input id="name1" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+  <div class="form__element form__element_brief">
+    <label class="label" for="name2">Телефон</label>
+    <input id="name2" class="input input_outline js-input" type="text" name="name" value="">
+  </div>
+</form>
+
+<form class="brief__form form form_big">
+  <div class="form__textarea form__element_brief">
+    <label class="label" for="text">Здесь вы можете написать отличие вашего бренда</label>
+    <textarea id="text" class="input input_outline js-input" rows="1"></textarea>
+  </div>
+</form>
