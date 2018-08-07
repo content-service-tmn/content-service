@@ -1,5 +1,5 @@
 <?php namespace Processwire; ?>
-<section class="header header_contacts">
+<section class="header header_contacts header_fixed">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="contacts">
