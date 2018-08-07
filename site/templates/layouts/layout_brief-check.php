@@ -188,6 +188,13 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
     }
 
+    $("*").keyup(function(event){
+        if(event.keyCode == 13){
+            event.preventDefault();
+        }
+    });
+
+
     var answers = {};
     buildNode(<?=$brief_content?>, 0);
 
