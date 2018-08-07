@@ -4,7 +4,7 @@ bd($pages->find("template=layout_service, id<".$page->id."sort=id"));
 bd($pages->find("template=layout_service, id>".$page->id."sort=id"));
 ?>
 
-<section class="header">
+<section class="header header_fixed">
   <a href="#" class="burger"></a>
 </section>
 <section class="service">
@@ -30,6 +30,8 @@ bd($pages->find("template=layout_service, id>".$page->id."sort=id"));
         </ul>
       </div>
     </div>
-    <div class="service__cell service__cell_right background" style="background-image: url('<?=$page->service_image->url?>')"></div>
+    <div class="service__cell service__cell_right">
+      <div class="background" style="background-image: url('<?=$page->service_image->url?>')"></div>
+    </div>
   </div>
 </section>

@@ -7,16 +7,10 @@
   &__cell {
     box-sizing: border-box;
     &_left {
-      width:80%;
-      @media(min-width: 1920px) {
-        width:50%;
-      }
+      width:50%;
     }
     &_right {
-      width:20%;
-      @media (min-width: 1920px) {
-        width:50%;
-      }
+      width:50%;
     }
   }
 }
@@ -24,10 +18,13 @@
 .content {
   padding:60px 60px 150px 60px;
   position:relative;
-  height:100vh;
   box-sizing: border-box;
   @media(max-width: 1023px) {
     height:auto;
+  }
+  &_fixed {
+    width:50%;
+    position:fixed;
   }
 
   &__heading {
@@ -136,21 +133,27 @@
 
     &_content {
       color:rgb(255, 65, 65);
+      border-color:rgb(255, 65, 65);
     }
     &_site {
       color:rgb(23,154,184);
+      border-color:rgb(23,154,184);
     }
     &_context {
       color:rgb(231, 195, 35);
+      border-color:rgb(231, 195, 35);
     }
     &_crm {
       color:rgb(75, 211, 201);
+      border-color:rgb(75, 211, 201);
     }
     &_target {
       color:rgb(149, 97, 50);
+      border-color:rgb(149, 97, 50);
     }
     &_brand {
       color:rgb(142, 45, 212);
+      border-color:rgb(142, 45, 212);
     }
 
   }
@@ -213,6 +216,9 @@
 }
 
 .background {
+  position:fixed;
+  left:50%;
+  right:0;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
