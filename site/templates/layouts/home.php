@@ -1,6 +1,6 @@
 <?php namespace Processwire;?>
 
-<section class="header header_fixed">
+<section class="header">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="home">
@@ -14,6 +14,12 @@
           <a href="brief" class="button">заполнить бриф</a>
         </div>
       </div>
+      <div class="content disabled">
+        <h2 class="content__heading">кейсы</h2>
+          <h3 class="content__subheading">мы создали это</h3>
+          <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
+          <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
+      </div>
     </div>
     <div class="home__cell home__cell_right">
       <div class="services">
@@ -24,12 +30,28 @@
                     <h3 class="services__text"><?=$service->service_title?></h3>
                 </div>
             <?php endforeach; ?>
+            <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+                <a href="" class="services__link"></a>
+                <h3 class="services__text">Motul-Expert</h3>
+            </div>
+            <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+                <a href="" class="services__link"></a>
+                <h3 class="services__text">Вольные угодья</h3>
+            </div>
+            <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+                <a href="" class="services__link"></a>
+                <h3 class="services__text">ТЭО</h3>
+            </div>
+            <div class="services__cell" style="background-image:url('<?=$config->urls->templates?>assets/img/case-1.png')">
+                <a href="" class="services__link"></a>
+                <h3 class="services__text">Nevastroy</h3>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="home">
+<!-- <section class="home">
   <div class="home__grid">
     <div class="home__cell home__cell_left">
       <div class="content">
@@ -59,4 +81,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
