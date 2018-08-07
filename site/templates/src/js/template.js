@@ -82,3 +82,18 @@ $(document).ready(function() {
         e.preventDefault();
     });
 });
+
+function initMap() {
+  var coordinates= {lat: 57.1419482, lng: 65.5986856},
+      options = {
+        zoom: 16,
+        disableDefaultUI: true,
+        center: coordinates,
+        draggable: !("ontouchend" in document)
+      };
+  var map = new google.maps.Map(document.getElementById('google-map'), options);
+  $.getJSON('../../json/google-map.json',function(data){
+    map.setOptions({styles:data});
+  });
+  new google.maps.Marker({map:map,position:coordinates});
+}

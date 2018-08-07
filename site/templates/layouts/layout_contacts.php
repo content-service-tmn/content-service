@@ -5,7 +5,9 @@
 <section class="contacts">
   <div class="contacts__grid">
     <div class="contacts__cell contacts__cell_left">
-      <div class="contacts__image" style="background-image:url('<?=$config->urls->templates?>assets/img/contacts.png')"></div>
+      <div class="contacts__image">
+        <div id="google-map" class="contacts__map"></div>
+      </div>
     </div>
     <div class="contacts__cell contacts__cell_right">
       <div class="content">
