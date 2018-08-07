@@ -100,6 +100,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
         });
         item.html(variables);
+        errorsHandler();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
@@ -122,6 +123,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             if (node.variables[0].next) {
                 buildNode(node.variables[0].next, currentid);
             } else {
+                this.remove();
                 $.ajax({
                     url: "<?=$pages->find("template=ajax_handler")->first()->url?>",
                     type: 'POST',
@@ -150,7 +152,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             variables += variable;
         });
         item.html(variables);
-
+        errorsHandler();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
@@ -200,6 +202,17 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
     }
 
+    $(document).ready(function() {
+        $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+                event.preventDefault();
+                $("#current_quest").find(".submit").click();
+                return false;
+            }
+        });
+    });
+
+
     var answers = {};
     buildNode(<?=$brief_content?>, 0);
 
@@ -221,5 +234,11 @@ $brief_content = file_get_contents($page->brief_data->filename);
             pos: 'bottom-center'
         });
     }
-</script>
 
+    function errorsHandler() {
+        return $('.js-input').on('change keyup', function(e) {
+            e.preventDefault();
+            $(this).removeClass("error");
+        });
+    }
+</script>

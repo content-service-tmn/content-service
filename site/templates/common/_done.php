@@ -15,27 +15,20 @@
     <a class="uk-offcanvas-close"></a>
     <div class="uk-offcanvas-bar-inner sidebar">
       <ul class="sidebar__items">
-        <li class="sidebar__item"><a href="#">главная</a></li>
+        <li class="sidebar__item"><a href="#main" data-uk-smoothscroll>главная</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_work")->url?>">схема работы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_service")->url?>">услуги content service</a></li>
-        <li class="sidebar__item"><a href="#cases">кейсы</a></li>
+        <li class="sidebar__item"><a href="#cases" data-uk-smoothscroll>кейсы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_about_us")->url?>">об агенстве</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_brief-check")->url?>">бриф</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_contacts")->url?>">контакты</a></li>
       </ul>
       <ul class="sidebar__items sidebar__items_contacts">
-        <li class="sidebar__item"><a href="#callback">оставить заявку</a></li>
         <li class="sidebar__item"><a href="tel:<?=phoneLink($pages->get("template=layout_contacts")->contacts_phone)?>"><?=$pages->get("template=layout_contacts")->contacts_phone?></a></li>
       </ul>
-    </div>
-  </div>
-</div>
-<div id="callback" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar">
-    <a class="uk-offcanvas-close"></a>
-    <div class="uk-offcanvas-bar-inner callback">
-      <h2 class="callback__heading">оставить заявку</h2>
-      <form id="callback__form" class="callback__form form" action="/" method="post">
+      <div class="callback sidebar__callback">
+        <form id="callback__form" class="callback__form form" action="/" method="post">
+          <h2 class="callback__heading">оставить заявку</h2>
           <div class="form__element form__element_name">
             <label class="label" for="name">Имя</label>
             <input id="name" class="input input_outline js-input" type="text" name="name" value="">
@@ -52,6 +45,7 @@
           </div>
           <p class="form__text">Нажимая кнопку отправить, вы соглашаетесь на <a href="" target="_blank">обработку персональных данных</a></p>
         </form>
+      </div>
     </div>
   </div>
 </div>

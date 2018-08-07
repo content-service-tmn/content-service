@@ -25,6 +25,10 @@
     -webkit-tap-highlight-color: rgba(255,255,255,0);
     -webkit-appearance: none;
     color: #747474;
+    @media(max-width: 767px) {
+      font-size:18px;
+      line-height: 27px;
+    }
     & .error {
       border-color:red;
     }
@@ -51,7 +55,6 @@
   .label {
     position: absolute;
     width: 100%;
-    height: 52px;
     padding-bottom:5px;
     font-weight: 500;
     font-size: 24px;
@@ -59,17 +62,21 @@
     box-sizing: border-box;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
+    @media(max-width: 767px) {
+      font-size:18px;
+      line-height: 27px;
+    }
   }
-  &.is_focused textarea,
-  &.is_filled textarea {
-
+  &.is_focused label,
+  &.is_filled label {
+    transform:translate(-50%,-50%) scale(0.5) translate(50%,5%);
   }
 }
 .form__element {
   position: relative;
-  &_name { margin-top: 40px; }
-  &_phone { margin-top: 50px; }
-  &_submit { margin-top: 50px;}
+  &_name { margin-top: 20px; }
+  &_phone { margin-top: 20px; }
+  &_submit { margin-top: 20px;}
 }
 .form__radio {
   &+* {
@@ -96,7 +103,7 @@
     background-position: 50% 50%;
     background-image:url(../img/box.svg);
     left:0;
-    bottom:3px;
+    top:8px;
   }
   input:not(:checked) + label {
 
@@ -113,7 +120,7 @@
       background-position: 50% 50%;
       background-image:url(../img/check.svg);
       left:4px;
-      bottom:8px;
+      top:5px;
     }
   }
 }
@@ -168,7 +175,6 @@
   .label {
     position: absolute;
     width: 100%;
-    height: 52px;
     padding-bottom:15px;
     font-family: "Oswald",arial,sans-serif;
     font-weight: 500;
@@ -181,7 +187,23 @@
   }
   &.is_focused label,
   &.is_filled label {
-
+    transform:translate(-50%,-50%) scale(0.5) translate(50%,5%);
+  }
+}
+.form__element_brief {
+  .label,input {
+    @media(max-width: 767px) {
+      font-size:18px;
+      line-height: 27px;
+      padding-bottom:5px;
+    }
+  }
+}
+.form__element_name,.form__element_phone {
+  .label,input {
+    font-size:18px;
+    line-height: 27px;
+    padding-bottom:5px;
   }
 }
 

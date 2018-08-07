@@ -36,13 +36,11 @@ var path = {
         },
         json: 'site/templates/src/json/*.json',
         fonts: 'site/templates/src/fonts/*.*'
-        // scss: 'src/scss/*.scss'
     },
     watch: {
         php: 'site/templates/**/*.php',
         js: 'site/templates/src/js/**/*.js',
         less: 'site/templates/src/less/**/*.less',
-        // scss: 'src/scss/**/*.scss',
         img: 'site/templates/src/img/**/*.*',
         uikit: {
           js: 'site/templates/src/uikit/js/**/*.js',
@@ -134,10 +132,8 @@ gulp.task('fonts:build', function() {
 gulp.task('build', [
     'php:build',
     'less:build',
-    // 'scss:build',
     'js:build',
     'img:build',
-    //'uikit:build:less',
     'uikit:build:js',
     'uikit:build:fonts',
     'json:build',
@@ -151,9 +147,6 @@ gulp.task('watch', function(){
     watch([path.watch.less], function(event, cb) {
         gulp.start('less:build');
     });
-    // watch([path.watch.scss], function(event, cb) {
-    //     gulp.start('scss:build');
-    // });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
