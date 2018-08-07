@@ -25,6 +25,7 @@
     "assets/js/core/core.js",
     "assets/js/core/modal.js",
     "assets/js/core/utility.js",
+    "assets/js/core/scrollspy.js",
     "assets/js/core/offcanvas.custom.js",
     "assets/js/core/switcher.js",
     "assets/js/core/smooth-scroll.js",
