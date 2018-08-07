@@ -2,20 +2,13 @@
 @gray:rgb(232,232,232);
 
 .case {
-
   &__grid {
     display:flex;
     flex-wrap: wrap;
   }
   &__cell {
     box-sizing: border-box;
-    width:50%;
-    @media(max-width: 959px) {
-      width:100%;
-    }
-    &_big {
-      width:100%;
-    }
+    width:100%;
     &_text {
       padding:90px 60px;
       &>*+* {
@@ -25,20 +18,8 @@
     &_text-center {
       text-align: center;
     }
-    &_shadow-bottom {
-      position:relative;
-      &:after {
-        content:"";
-        position:absolute;
-        height:20px;
-        left:0;
-        right:0;
-        bottom:0;
-        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.05));
-      }
-    }
     &_motul-light {
-      background-color:white;
+      background-color:@gray;
       color:@motul-gray;
     }
     &_motul-dark {
@@ -56,7 +37,7 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color:@gray;
+  background-color:rgba(0,0,0,0.08);
   padding:90px;
   &__img {
     max-height:370px;
