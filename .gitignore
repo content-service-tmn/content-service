@@ -4,5 +4,4 @@ aiom/
 cache/
 logs/
 sessions/
-modules/
 *.save
