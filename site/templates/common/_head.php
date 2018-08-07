@@ -12,7 +12,7 @@
 <link rel="manifest" href="/favicons/site.webmanifest">
 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5"> -->
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=cyrillic" rel="stylesheet">
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
