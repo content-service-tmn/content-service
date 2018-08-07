@@ -7,9 +7,22 @@
     box-sizing: border-box;
     &_left {
       width:66.6667%;
+      @media(max-width: 1023px) {
+        width:50%;
+        order:1;
+      }
+      @media(max-width: 767px) {
+        width:100%;
+      }
     }
     &_right {
       width:33.3333%;
+      @media(max-width: 1023px) {
+        width:50%;
+      }
+      @media(max-width: 767px) {
+        width:100%;
+      }
     }
   }
   &__image {
@@ -21,6 +34,15 @@
     background-size: cover;
     background-position: 50% 50%;
     height:100vh;
+    @media(max-width: 1023px) {
+      width:50%;
+      left:50%;
+    }
+    @media(max-width: 767px) {
+      width:100%;
+      position:relative;
+      left:0;
+    }
   }
   &__name {
     font-size:18px;
