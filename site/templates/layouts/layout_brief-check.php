@@ -25,7 +25,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 <form class="brief__form form">
                     <div class="form__element form__element_brief">
                         <label class="label" for="namepattern_id">pattern_text</label>
-                        <input id="namepattern_id" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name">
+                        <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name">
                     </div>
                 </form>
                 <div class="brief__submit submit">далее</div>
@@ -38,7 +38,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
         <form class="brief__form form form_big">
             <div class="form__textarea form__element_brief">
                 <label class="label" for="text">pattern_text</label>
-                <textarea id="text" data-title="pattern_text" class="input input_outline js-input brief-form__text" rows="1"></textarea>
+                <textarea id="text" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" rows="1"></textarea>
             </div>
         </form>
         <div class="brief__submit submit">далее</div>
@@ -92,7 +92,12 @@ $brief_content = file_get_contents($page->brief_data->filename);
         var item_html = item.html();
         var variables = "";
         node.variables.forEach(function (item) {
-            variables += item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
+            var variable = item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
+            if (item.datavalidator != undefined){
+                variable = variable.replace(/pattern_validator/g, item.datavalidator);
+            }
+            variables += variable;
+
         });
         item.html(variables);
         $(".submit").on("click", function () {
@@ -100,7 +105,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
-                if (regex == "/(?:)/") {
+                if (regex == "/pattern_validator/") {
                     regex = /\w+/;
                 }
                 if (!regex.test($(this).val())) {
@@ -138,7 +143,11 @@ $brief_content = file_get_contents($page->brief_data->filename);
         var item_html = item.html();
         var variables = "";
         node.variables.forEach(function (item) {
-            variables += item_html.replace(/pattern_text/g, item.vartitle);
+            var variable = item_html.replace(/pattern_text/g, item.vartitle);
+            if (item.datavalidator != undefined){
+                variable = variable.replace(/pattern_validator/g, item.datavalidator);
+            }
+            variables += variable;
         });
         item.html(variables);
 
@@ -147,6 +156,9 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
+                if (regex == "/pattern_validator/") {
+                    regex = /\w+/;
+                }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
                     hasError = true;
