@@ -234,4 +234,3 @@ $brief_content = file_get_contents($page->brief_data->filename);
         });
     }
 </script>
-
