@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="home__cell home__cell_right">
+        <div id="main" class="home__cell home__cell_right">
           <div class="services">
             <div class="services__grid">
               <?php foreach ($pages->find("template=layout_service") as $service): ?>
@@ -45,7 +45,7 @@
             </div>
           </div>
         </div>
-        <div class="home__cell home__cell_right">
+        <div id="cases" class="home__cell home__cell_right">
           <div data-uk-slideset="{small: 1,medium: 2, animation: 'slide-horizontal'}">
             <ul class="cases uk-slideset">
               <?php foreach ($pages->find("template=case") as $pge): ?>
