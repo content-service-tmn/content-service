@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="home__cell home__cell_right">
-          <div data-uk-slideset="{default: 2, animation: 'slide-horizontal'}">
+          <div data-uk-slideset="{small: 1,medium: 2, animation: 'slide-horizontal'}">
             <ul class="cases uk-slideset">
               <?php foreach ($pages->find("template=case") as $pge): ?>
                 <li class="cases__case case-block"
