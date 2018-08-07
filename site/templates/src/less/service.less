@@ -177,6 +177,7 @@
     @media(min-width: 1920px) {
       margin-top:60px;
     }
+    
   }
   &__items {
     position:absolute;
@@ -185,6 +186,9 @@
     right:60px;
     display:flex;
     justify-content: space-between;
+    @media(max-width: 767px) {
+      display:none;
+    }
   }
   &__item {
     display:inline;
