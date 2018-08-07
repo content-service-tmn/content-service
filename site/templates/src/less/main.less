@@ -9,21 +9,21 @@
   }
   &__fixed-cell {
     position:fixed;
+    top:0;
+    left:0;
     width:50%;
     @media(min-width: 1920px) {
       width:33.3333%;
     }
     @media(max-width: 1023px) {
       width:100%;
+      position:relative;
     }
   }
   &__cell {
     box-sizing: border-box;
     &_left {
       width:50%;
-      background-color:#fff;
-      position:relative;
-      z-index:100;
       @media(min-width: 1920px) {
         width:33.3333%;
       }
@@ -127,5 +127,7 @@
 }
 
 .disabled {
-  display:none;
+  @media(min-width:1024px) {
+    display:none;
+  }
 }
