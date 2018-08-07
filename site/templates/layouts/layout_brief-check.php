@@ -92,7 +92,12 @@ $brief_content = file_get_contents($page->brief_data->filename);
         var item_html = item.html();
         var variables = "";
         node.variables.forEach(function (item) {
-            variables += item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
+            var variable = item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
+            if (item.datavalidator != undefined){
+                variable = variable.replace(/pattern_validator/g, item.datavalidator);
+            }
+            variables += variable;
+
         });
         item.html(variables);
         $(".submit").on("click", function () {
@@ -100,6 +105,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
+                console.log(regex);
                 if (regex == "/pattern_validator/") {
                     regex = /\w+/;
                 }
