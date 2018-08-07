@@ -100,6 +100,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
         });
         item.html(variables);
+        errorsHandler();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
@@ -151,7 +152,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             variables += variable;
         });
         item.html(variables);
-
+        errorsHandler();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
@@ -231,6 +232,13 @@ $brief_content = file_get_contents($page->brief_data->filename);
             status: 'warning',
             timeout: 3000,
             pos: 'bottom-center'
+        });
+    }
+
+    function errorsHandler() {
+        return $('.js-input').on('change keyup', function(e) {
+            e.preventDefault();
+            $(this).removeClass("error");
         });
     }
 </script>
