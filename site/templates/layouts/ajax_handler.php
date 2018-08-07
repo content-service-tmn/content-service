@@ -32,6 +32,9 @@ if ($config->ajax) {
             $name = $sanitizer->text($data["name"]);
             $phone = $sanitizer->text($data["phone"]);
             $message = "Имя: {$name}, телефон: {$phone}.";
+            if (isset($data["from"])){
+                $message .= " Предложение: " . $sanitizer->text($data["from"]);
+            }
             $m->body($messageBody . $message);
         }
     }
