@@ -1,8 +1,4 @@
-<?php
-namespace Processwire;
-bd($pages->find("template=layout_service, id<".$page->id."sort=id"));
-bd($pages->find("template=layout_service, id>".$page->id."sort=id"));
-?>
+<?php namespace Processwire;?>
 
 <section class="header">
   <a href="#" class="burger"></a>
@@ -23,6 +19,8 @@ bd($pages->find("template=layout_service, id>".$page->id."sort=id"));
         <ul class="content__items">
             <?php $prevs = $pages->find("template=layout_service, id<".$page->id."sort=id"); if($prevs->count>0): ?>
           <li class="content__item"><a href="<?=$prevs[$prevs->count-1]->url?>" class="content__link content__link_left"><?=$prevs[$prevs->count-1]->title?></a></li>
+                <?php else: ?>
+                <li class="content_item"/>
             <?php endif; ?>
             <?php $nexts = $pages->find("template=layout_service, id>".$page->id."sort=id"); if($nexts->count>0): ?>
             <li class="content__item"><a href="<?=$nexts[0]->url?>" class="content__link content__link_right"><?=$nexts[0]->title?></a></li>
