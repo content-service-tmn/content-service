@@ -1,0 +1,31 @@
+.brief {
+  &__grid {
+    display:flex;
+    flex-wrap: wrap;
+  }
+  &__cell {
+    box-sizing: border-box;
+    &_left {
+      width:66.6667%;
+    }
+    &_right {
+      width:33.3333%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+  &__subheading {
+    margin-top:30px;
+    @media(max-width: 1440px) {
+      font-size:36px;
+      line-height: 48px;
+    }
+  }
+  &__form {
+    margin-top:30px;
+  }
+  &__submit {
+    margin-top:30px;
+  }
+}
