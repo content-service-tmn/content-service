@@ -1,6 +1,6 @@
 <?php namespace Processwire; ?>
 <section class="header header_about">
-  <a href="#canvas" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
+  <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="about">
   <div class="about__grid">
