@@ -152,7 +152,7 @@ function initMap() {
         draggable: !("ontouchend" in document)
       };
   var map = new google.maps.Map(document.getElementById('google-map'), options);
-  $.getJSON('../../json/google-map.json',function(data){
+  $.getJSON('/google-map.json',function(data){
     map.setOptions({styles:data});
   });
   new google.maps.Marker({map:map,position:coordinates});
