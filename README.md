@@ -1,12 +1,9 @@
 
-
-
-
 This document is in Markdown. An HTML formatted version of this document
 can be read at: https://github.com/processwire/processwire/blob/master/README.md
 
 
-## Table of Contentsrvr
+## Table of Content
 
 1. [About](#about-processwire)
 2. [Installation](#installing-processwire)
