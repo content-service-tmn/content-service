@@ -10,12 +10,17 @@
       @media(min-width: 1440px) {
         width:50%;
       }
+      @media(max-width: 1023px) {
+        width:100%;
+      }
     }
     &_right {
       width:60%;
-      overflow-y:scroll;
       @media(min-width: 1440px) {
         width:50%;
+      }
+      @media(max-width: 1023px) {
+        width:100%;
       }
     }
   }
@@ -29,7 +34,17 @@
 
 .pyramid {
   height:100vh;
-  position:relative;
+  position:fixed;
+  left:0;
+  top:0;
+  width:40%;
+  @media(min-width: 1440px) {
+    width:50%;
+  }
+  @media(max-width: 1023px) {
+    position:relative;
+    width:100%;
+  }
   &__svg {
     position:absolute;
     left:50%;

@@ -9,6 +9,7 @@
   @media(max-width:767px) {
     padding:20px 20px 0 20px;
     justify-content: flex-end;
+    right:0;
   }
   &_fixed {
     position:fixed;
@@ -19,16 +20,27 @@
     @media(min-width: 1440px) {
       left: 50%;
     }
+    @media(max-width: 1023px) {
+      left:0;
+    }
   }
   &_contacts {
     left: 66.6667%;
     right:0;
+    @media(max-width: 1023px) {
+      left:0;
+      right:0;
+    }
   }
   &_about {
     left:33.3333%;
     right:0;
     @media(min-width: 1920px) {
       left: 50%;
+    }
+    @media(max-width: 1023px) {
+      left:0;
+      position:fixed;
     }
   }
 }
