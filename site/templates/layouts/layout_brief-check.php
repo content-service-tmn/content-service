@@ -105,7 +105,6 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
-                console.log(regex);
                 if (regex == "/pattern_validator/") {
                     regex = /\w+/;
                 }
