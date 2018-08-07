@@ -43,7 +43,7 @@
               <button id="submit_form" class="send__button" type="submit" name="submit" value="order"></button>
             </div>
           </div>
-          <p class="form__text">Нажимая кнопку отправить, вы соглашаетесь на <a href="" target="_blank">обработку персональных данных</a></p>
+          <p class="form__text">Нажимая кнопку отправить, вы соглашаетесь на <a href="<?=$pages->get("template=layout_privacy")->url?>" target="_blank">обработку персональных данных</a></p>
         </form>
       </div>
     </div>
@@ -71,7 +71,7 @@
               <button id="submit_form1" class="send__button" type="submit" name="submit" value="order"></button>
             </div>
           </div>
-          <p class="form__text">Нажимая кнопку отправить, вы соглашаетесь на <a href="" target="_blank">обработку персональных данных</a></p>
+          <p class="form__text">Нажимая кнопку отправить, вы соглашаетесь на <a href="<?=$pages->get("template=layout_privacy")->url?>" target="_blank">обработку персональных данных</a></p>
         </form>
       </div>
     </div>
