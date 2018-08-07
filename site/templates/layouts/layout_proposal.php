@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header header_fixed">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="proposal">
@@ -9,9 +9,8 @@
           <h3 class="content__subheading">мы знаем, что вы были на нашем сайте.<br>Вы просматривали:</h3>
           <p><span class="content__quote content__quote_case">- контекстная реклама</span></p>
           <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие» запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-          <h3 class="content__subheading">оставь заявку на бесплатное что-то</h3>
           <div class="content__button">
-            <a href="#" class="button">рассчитать стоимость</a>
+            <a href="#callback" class="button" data-uk-offcanvas="{mode:'slide'}">оставить заявку</a>
           </div>
       </div>
     </div>
