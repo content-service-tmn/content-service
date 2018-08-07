@@ -122,6 +122,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             if (node.variables[0].next) {
                 buildNode(node.variables[0].next, currentid);
             } else {
+                this.remove();
                 $.ajax({
                     url: "<?=$pages->find("template=ajax_handler")->first()->url?>",
                     type: 'POST',
@@ -200,10 +201,14 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
     }
 
-    $("*").keyup(function(event){
-        if(event.keyCode == 13){
-            event.preventDefault();
-        }
+    $(document).ready(function() {
+        $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+                event.preventDefault();
+                $("#current_quest").find(".submit").click();
+                return false;
+            }
+        });
     });
 
 
