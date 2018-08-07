@@ -1,4 +1,4 @@
-<section class="header header_fixed">
+<section class="header">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode:'slide'}"></a>
 </section>
 <section class="home">
@@ -37,25 +37,26 @@
           </div>
         </div>
         <div class="case__grid">
-          <div class="case__cell adaptive-block">
-            <img src="<?=$config->urls->templates?>assets/img/motul-phone.png" class="adaptive-block__img" alt="">
-          </div>
-          <div class="case__cell case__cell_motul-light case__cell_text">
-            <div class="adaptive-grid">
-              <div class="adaptive-grid__cell">
-                <div class="adaptive-grid__image adaptive-grid__image_laptop"></div>
-                <p class="adaptive-grid__name">Экран</p>
-              </div>
-              <div class="adaptive-grid__cell">
-                <div class="adaptive-grid__image adaptive-grid__image_tablet"></div>
-                <p class="adaptive-grid__name">Планшет</p>
-              </div>
-              <div class="adaptive-grid__cell active">
-                <div class="adaptive-grid__image adaptive-grid__image_phone"></div>
-                <p class="adaptive-grid__name">Телефон</p>
-              </div>
-              <p class="adaptive-grid__text">Таким образом дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же начало повседневной работы по формированию позиции требуют от нас анализа дальнейших направлений развития.</p>
-            </div>
+          <div class="case__cell case__cell_big switcher">
+            <ul data-uk-switcher="{connect:'#my-id'}" class="switcher__buttons">
+              <li class="switcher__button switcher__button_desktop">
+                <p>Экран</p>
+                <a href=""></a>
+              </li>
+              <li class="switcher__button switcher__button_tablet">
+                <p>Планшет</p>
+                <a href=""></a>
+              </li>
+              <li class="switcher__button switcher__button_phone">
+                <p>Смартфон</p>
+                <a href=""></a>
+              </li>
+            </ul>
+            <ul id="my-id" class="uk-switcher">
+                <li class="switcher__element" style="background-image:url('<?=$config->urls->templates?>assets/img/motul-desktop.png')"></li>
+                <li class="switcher__element" style="background-image:url('<?=$config->urls->templates?>assets/img/motul-tablet.png')"></li>
+                <li class="switcher__element" style="background-image:url('<?=$config->urls->templates?>assets/img/motul-phone.png')"></li>
+            </ul>
           </div>
         </div>
         <div class="case__grid">
