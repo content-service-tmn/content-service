@@ -9,11 +9,27 @@
   &__cell {
     box-sizing: border-box;
     width:100%;
+    &_small {
+      width:50%;
+      @media(max-width: 767px) {
+        width:100%;
+      }
+    }
     &_text {
       padding:90px 60px;
       &>*+* {
         margin-top:30px;
       }
+      &>p+p {
+        margin-top:15px;
+      }
+    }
+    &_background {
+      padding-top:110px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      color:white;
     }
     &_text-center {
       text-align: center;
@@ -25,6 +41,9 @@
     &_motul-dark {
       background-color:@motul-gray;
       color:white;
+    }
+    &_free-lands {
+      background-color:@gray;
     }
   }
   &__img {
