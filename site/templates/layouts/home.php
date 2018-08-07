@@ -36,15 +36,19 @@
               <?php endforeach; ?>
             </div>
           </div>
-          <div class="cases">
-            <?php foreach ($pages->find("template=case") as $pge): ?>
-              <div class="cases__case case-block"
-                style="background-image:url('<?= $pge->case_image->url ?>')">
-                <h1 class="case-block__heading"><?= $pge->title ?></h1>
-                <p class="case-block__text"><?= $pge->case_typeOfService ?></p>
-                <a href="<?= $pge->url ?>" class="case-block__link"></a>
-              </div>
-            <?php endforeach; ?>
+          <div data-uk-slideset="{default: 2, animation: 'slide-horizontal'}">
+            <ul class="cases uk-slideset">
+              <?php foreach ($pages->find("template=case") as $pge): ?>
+                <li class="cases__case case-block"
+                  style="background-image:url('<?= $pge->case_image->url ?>')">
+                  <h1 class="case-block__heading"><?= $pge->title ?></h1>
+                  <p class="case-block__text"><?= $pge->case_typeOfService ?></p>
+                  <a href="<?= $pge->url ?>" class="case-block__link"></a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+            <a href=""data-uk-slideset-item="previous" class="cases__nav cases__nav_left"></a>
+            <a href=""data-uk-slideset-item="next" class="cases__nav cases__nav_right"></a>
           </div>
         </div>
     </div>

@@ -6,11 +6,45 @@
     display:inline-block;
     flex-shrink:0;
   }
+  &__nav {
+    position:absolute;
+    bottom:30px;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.9);
+    &:before {
+      content:"";
+      position:absolute;
+      left:50%;
+      top:50%;
+      height:16px;
+      width:16px;
+      background-position: 50% 50%;
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-image:url('../img/arrow.svg');
+      transform:translate(-50%,-50%);
+    }
+    &_left {
+      left:30px;
+      &:before {
+        transform:translate(-50%,-50%) rotate(180deg);
+      }
+    }
+    &_right {
+      right:30px;
+    }
+  }
+}
+[data-uk-slideset] {
+  position:relative;
 }
 
 .case-block {
   position:relative;
-  height:100vh;
+  height:100%;
+  width:50%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
