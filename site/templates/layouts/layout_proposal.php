@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header header_fixed">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="proposal">
