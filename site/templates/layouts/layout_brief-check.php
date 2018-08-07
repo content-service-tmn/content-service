@@ -100,6 +100,9 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
+                if (regex == "/(?:)/") {
+                    regex = /\w+/;
+                }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
                     hasError = true;
