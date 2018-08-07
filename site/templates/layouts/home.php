@@ -7,7 +7,7 @@
     <div class="home__grid">
         <div class="home__cell home__cell_left">
           <div class="home__fixed-cell">
-            <div class="aside disabled">
+            <div class="aside">
                 <h1 class="aside__hello">hello</h1>
                 <h2 class="aside__name">content service</h2>
                 <p class="aside__slogan">Создаём прибыльные системы продаж в интернете</p>
@@ -35,7 +35,7 @@
     <div class="home__grid">
         <div class="home__cell home__cell_left">
           <div class="home__fixed-cell">
-            <div class="content">
+            <div class="content disabled">
                 <h2 class="content__heading">кейсы</h2>
                 <h3 class="content__subheading">мы создали это</h3>
                 <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>

@@ -1,7 +1,10 @@
 .cases {
   height:100vh;
   display:flex;
+  flex-wrap: wrap;
   overflow:hidden;
+  justify-content: center;
+  align-items: center;
   &__case {
     box-sizing: border-box;
     display:inline-block;
@@ -14,6 +17,10 @@
     height:60px;
     border-radius: 50%;
     background-color:rgba(0,0,0,0.9);
+    @media(max-width: 767px) {
+      bottom:50%;
+      transform:translateY(50%);
+    }
     &:before {
       content:"";
       position:absolute;
@@ -49,6 +56,10 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  @media(max-width: 767px) {
+    width:100%;
+    height:50%;
+  }
   &__heading {
     color:white;
     position:absolute;
@@ -59,6 +70,9 @@
     transform:translateY(100%);
     @media(min-width: 1920px) {
       padding:0 60px;
+    }
+    @media(max-width: 767px) {
+      bottom:240px;
     }
   }
   &__text {
@@ -73,6 +87,9 @@
     text-transform: uppercase;
     @media(min-width: 1920px) {
       padding:0 60px;
+    }
+    @media(max-width: 767px) {
+      bottom:90px;
     }
   }
   &__link {
