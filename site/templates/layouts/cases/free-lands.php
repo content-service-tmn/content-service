@@ -18,7 +18,7 @@
     <div class="home__cell home__cell_right">
       <section class="case">
         <div class="case__grid">
-          <div class="case__cell case__cell_motul-light case__cell_text">
+          <div class="case__cell case__cell_free-lands case__cell_text">
             <h2>вольные угодья</h2>
             <p>Вольные угодья - поселок недалеко от Тюмени. У этого проекта уже был сайт!</p>
             <p>Почему нам пришлось делать новый?</p>
