@@ -1,6 +1,6 @@
 <?php namespace Processwire;?>
 
-<section class="header">
+<section class="header header_fixed">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="home">
@@ -14,7 +14,7 @@
           <a href="brief" class="button">заполнить бриф</a>
         </div>
       </div>
-      <div class="content disabled">
+      <div class="content content_fixed disabled">
         <h2 class="content__heading">кейсы</h2>
           <h3 class="content__subheading">мы создали это</h3>
           <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>

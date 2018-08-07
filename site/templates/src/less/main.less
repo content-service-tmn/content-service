@@ -15,6 +15,7 @@
     box-sizing: border-box;
     &_left {
       width:50%;
+      position:relative;
       @media(min-width: 1920px) {
         width:33.3333%;
       }
@@ -40,7 +41,14 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  box-sizing: border-box;
+  width:50%;
+  position:fixed;
+  @media(min-width: 1920px) {
+    width:33.3333%;
+  }
   @media(max-width: 1023px) {
+    width:100%;
     padding:120px;
   }
   &__hello {
@@ -88,8 +96,6 @@
   &__grid {
     display:flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    height:100vh;
   }
   &__cell {
     height:310px;
