@@ -36,7 +36,7 @@
               <?php endforeach; ?>
             </div>
           </div>
-          <div class="cases" data-uk-scrollspy="{topoffset:100}">
+          <div class="cases">
             <?php foreach ($pages->find("template=case") as $pge): ?>
               <div class="cases__case case-block"
                 style="background-image:url('<?= $pge->case_image->url ?>')">

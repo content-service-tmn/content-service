@@ -32,6 +32,7 @@
     "assets/js/components/lightbox.js",
     "assets/js/components/notify.js",
     "assets/js/components/accordion.js",
+    "assets/js/components/slideset.js",
     "assets/js/template.js"
   ));
 ?>
