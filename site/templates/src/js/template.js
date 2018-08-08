@@ -150,10 +150,12 @@ $(document).ready(function() {
     });
 
     $('.accordion__item').on('click', function() {
-    var id = $(this).attr('data-id');
-    $('.svg__group').each(function() {
-    $(this).removeClass('is_active');
+      var id = $(this).attr('data-id');
+      $('.svg__group').each(function() {
+        $(this).removeClass('is_active');
+      });
+      $('[data-svg-id="' + id + '"]').addClass('is_active');
     });
-    $('[data-svg-id="' + id + '"]').addClass('is_active');
-    });
+
+    
 });
