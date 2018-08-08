@@ -45,7 +45,7 @@
                                 "variables": [
                                   {
                                     "varname": "address",
-                                    "vartitle" : "адрес",
+                                    "vartitle": "адрес",
                                     "next": {
                                       "name": "yourСompetitors",
                                       "title": "Кто Ваши конкуренты",
@@ -542,8 +542,8 @@
                                 "variables": [
                                   {
                                     "varname": "address",
-                                    "vartitle" : "адрес",
-                                    "next1": {
+                                    "vartitle": "адрес",
+                                    "next": {
                                       "name": "haveSocial",
                                       "title": "Есть ли соц. сети у Вашей компании?",
                                       "type": "radios",
@@ -558,7 +558,8 @@
                                             "variables": [
                                               {
                                                 "varname": "vkAddress",
-                                                "vartitle" : "Вконтакте",
+                                                "datavalidator": ".*",
+                                                "vartitle": "Вконтакте",
                                                 "next": {
                                                   "name": "yourСompetitors",
                                                   "title": "Кто Ваши конкуренты",
@@ -596,13 +597,15 @@
                                               },
                                               {
                                                 "varname": "instaAsdress",
-                                                "vartitle" : "Instagram",
-                                                "next":{}
+                                                "datavalidator": ".*",
+                                                "vartitle": "Instagram",
+                                                "next": {}
                                               },
                                               {
                                                 "varname": "fbAddress",
-                                                "vartitle" : "Facebook",
-                                                "next":{}
+                                                "datavalidator": ".*",
+                                                "vartitle": "Facebook",
+                                                "next": {}
                                               }
                                             ]
                                           }
@@ -635,36 +638,60 @@
                                     "varname": "yes",
                                     "vartitle": "Да",
                                     "next": {
-                                      "name": "yourСompetitors",
-                                      "title": "Кто Ваши конкуренты",
-                                      "type": "textarea",
+                                      "name": "socialAddress",
+                                      "title": "Ссылки на ваши соц. сети",
+                                      "type": "text",
                                       "variables": [
                                         {
-                                          "varname": "yourСompetitors",
-                                          "vartitle": "Кто Ваши конкуренты",
+                                          "varname": "vkAddress",
+                                          "datavalidator": ".*",
+                                          "vartitle": "Вконтакте",
                                           "next": {
-                                            "name": "contacts",
-                                            "title": "Оставьте Ваши контакты",
-                                            "type": "text",
+                                            "name": "yourСompetitors",
+                                            "title": "Кто Ваши конкуренты",
+                                            "type": "textarea",
                                             "variables": [
                                               {
-                                                "varname": "name",
-                                                "vartitle": "Имя",
-                                                "next": null
-                                              },
-                                              {
-                                                "varname": "phone",
-                                                "vartitle": "Телефон",
-                                                "next": null
-                                              },
-                                              {
-                                                "varname": "email",
-                                                "datavalidator": ".+@.+\..+",
-                                                "vartitle": "Электронная почта",
-                                                "next": null
+                                                "varname": "yourСompetitors",
+                                                "vartitle": "Кто Ваши конкуренты",
+                                                "next": {
+                                                  "name": "contacts",
+                                                  "title": "Оставьте Ваши контакты",
+                                                  "type": "text",
+                                                  "variables": [
+                                                    {
+                                                      "varname": "name",
+                                                      "vartitle": "Имя",
+                                                      "next": null
+                                                    },
+                                                    {
+                                                      "varname": "phone",
+                                                      "vartitle": "Телефон",
+                                                      "next": null
+                                                    },
+                                                    {
+                                                      "varname": "email",
+                                                      "datavalidator": ".+@.+\..+",
+                                                      "vartitle": "Электронная почта",
+                                                      "next": null
+                                                    }
+                                                  ]
+                                                }
                                               }
                                             ]
                                           }
+                                        },
+                                        {
+                                          "varname": "instaAsdress",
+                                          "datavalidator": ".*",
+                                          "vartitle": "Instagram",
+                                          "next": {}
+                                        },
+                                        {
+                                          "varname": "fbAddress",
+                                          "datavalidator": ".*",
+                                          "vartitle": "Facebook",
+                                          "next": {}
                                         }
                                       ]
                                     }
@@ -854,7 +881,7 @@
                                       "variables": [
                                         {
                                           "varname": "address",
-                                          "vartitle" : "адрес",
+                                          "vartitle": "адрес",
                                           "next": {
                                             "name": "yourСompetitors",
                                             "title": "Кто Ваши конкуренты",
