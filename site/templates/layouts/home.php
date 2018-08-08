@@ -34,8 +34,8 @@
 <section class="home">
     <div class="home__grid">
         <div class="home__cell home__cell_left">
-          <div class="home__fixed-cell">
-            <div class="content is_hidden">
+          <div class="home__fixed-cell is_hidden">
+            <div class="content">
                 <h2 class="content__heading">кейсы</h2>
                 <h3 class="content__subheading"><?=$pages->get("template=layout_cases")->case_title?></h3>
                 <p><span class="content__quote content__quote_case"><?=$pages->get("template=layout_cases")->cases_subtitle?></span></p>
