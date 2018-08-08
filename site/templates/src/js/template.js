@@ -140,7 +140,14 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-
+    $('#cases').on('inview.uk.scrollspy', function(){
+      $('.aside').toggleClass('is_hidden');
+      $('.content').toggleClass('is_hidden');
+    });
+    $('#cases').on('outview.uk.scrollspy', function(){
+      $('.content').toggleClass('is_hidden');
+      $('.aside').toggleClass('is_hidden');
+    });
 });
 
 function initMap() {
