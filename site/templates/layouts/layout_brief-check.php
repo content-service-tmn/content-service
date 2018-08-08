@@ -100,25 +100,26 @@ $brief_content = file_get_contents($page->brief_data->filename);
 
         });
         item.html(variables);
+        errorsHandler()();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
                 if (regex == "/pattern_validator/") {
-                    regex = /\w+/;
+                    regex = /[\w+, [А-я]+/;
                 }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
                     hasError = true;
                 }
                 innerAnswers[$(this).attr("data-title")] = $(this)[0].value;
+
             });
             if (hasError) {
                 return false;
             }
             answers[node.title] = innerAnswers;
-
             if (node.variables[0].next) {
                 buildNode(node.variables[0].next, currentid);
             } else {
@@ -151,14 +152,14 @@ $brief_content = file_get_contents($page->brief_data->filename);
             variables += variable;
         });
         item.html(variables);
-
+        errorsHandler()();
         $(".submit").on("click", function () {
             var innerAnswers = {};
             var hasError = false;
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
                 if (regex == "/pattern_validator/") {
-                    regex = /\w+/;
+                    regex = /[\w+, [А-я]+/;
                 }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
@@ -233,5 +234,34 @@ $brief_content = file_get_contents($page->brief_data->filename);
             pos: 'bottom-center'
         });
     }
-</script>
 
+    function errorsHandler() {
+        return function () {
+            // Событие при фокусе инпутов
+            $('.js-input').on('focus focusout', function(e) {
+                e.preventDefault();
+                $(e.target).parent().toggleClass('is_focused');
+                if(e.type == 'focusout') {
+                    $(e.target).val($.trim($(e.target).val()));
+                }
+            });
+            $('.js-input').on('change keyup', function(e) {
+                e.preventDefault();
+                if($.trim($(e.target).val()) !== '' && !$(e.target).hasClass('is_filled')) {
+                    $(e.target).parent().addClass('is_filled');
+                } else {
+                    $(e.target).parent().removeClass('is_filled');
+                }
+                $(this).removeClass("error");
+            });
+            $('.js-phone').on('focusout', function(e) {
+                e.preventDefault();
+                var val = $(this).val().replace(/[^0-9]/gi,'');
+                if(val.substr(0, 1) == 7) {
+                    val = '+7' + val.substr(1, val.length - 1);
+                }
+                $(this).val(val);
+            });
+        }
+    }
+</script>

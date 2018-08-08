@@ -22,13 +22,26 @@
   font-weight: normal;
   font-style: normal;
 }
-
+//HACKKKK
+body {
+  overflow-y: scroll;
+}
 strong {
   font-weight: 700;
 }
 a {
   text-decoration: none;
   color:black;
+  transition:all 0.2s;
+  &:hover {
+    color:#ea4335;
+  }
+}
+a,input,button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  &:focus {
+    outline:none;
+  }
 }
 
 body {
@@ -50,9 +63,15 @@ h1 {
   @media(min-width: 1920px) {
     font-size: 64px;
   }
+  @media(max-width: 767px) {
+    font-size:36px;
+  }
 }
 h2 {
   font-size: 48px;
+  @media(max-width: 767px) {
+    font-size:36px;
+  }
 }
 h3 {
   font-size: 36px;

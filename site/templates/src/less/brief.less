@@ -7,6 +7,9 @@
     box-sizing: border-box;
     &_left {
       width:66.6667%;
+      @media(max-width: 1023px) {
+        width:100%; 
+      }
     }
     &_right {
       width:33.3333%;
@@ -16,6 +19,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;
+      @media(max-width: 1023px) {
+        width:100%;
+        position:relative;
+        left:0;
+        top:0;
+      }
     }
   }
   &__subheading {
@@ -23,6 +32,10 @@
     @media(max-width: 1440px) {
       font-size:36px;
       line-height: 48px;
+    }
+    @media(max-width: 767px) {
+      font-size:24px;
+      line-height: 32px;
     }
   }
   &__form {
