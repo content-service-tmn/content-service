@@ -995,41 +995,52 @@
                                     "varname": "yes",
                                     "vartitle": "Да",
                                     "next": {
-                                      "name": "yourСompetitors",
-                                      "title": "Кто Ваши конкуренты",
-                                      "type": "textarea",
+                                      "name": "siteAddress",
+                                      "title": "Введите адрес вашего сайта",
+                                      "type": "text",
                                       "variables": [
                                         {
-                                          "varname": "yourСompetitors",
-                                          "vartitle": "Кто Ваши конкуренты",
+                                          "varname": "address",
+                                          "vartitle": "адрес",
                                           "next": {
-                                            "name": "benefits",
-                                            "title": "Чем отличается Ваш бренд от других?",
+                                            "name": "yourСompetitors",
+                                            "title": "Кто Ваши конкуренты",
                                             "type": "textarea",
                                             "variables": [
                                               {
-                                                "varname": "benefits",
-                                                "vartitle": "Чем отличается Ваш бренд от других?",
+                                                "varname": "yourСompetitors",
+                                                "vartitle": "Кто Ваши конкуренты",
                                                 "next": {
-                                                  "name": "contacts",
-                                                  "title": "Оставьте Ваши контакты",
-                                                  "type": "text",
+                                                  "name": "benefits",
+                                                  "title": "Чем отличается Ваш бренд от других?",
+                                                  "type": "textarea",
                                                   "variables": [
                                                     {
-                                                      "varname": "name",
-                                                      "vartitle": "Имя",
-                                                      "next": null
-                                                    },
-                                                    {
-                                                      "varname": "phone",
-                                                      "vartitle": "Телефон",
-                                                      "next": null
-                                                    },
-                                                    {
-                                                      "varname": "email",
-                                                      "datavalidator": ".+@.+\..+",
-                                                      "vartitle": "Электронная почта",
-                                                      "next": null
+                                                      "varname": "benefits",
+                                                      "vartitle": "Чем отличается Ваш бренд от других?",
+                                                      "next": {
+                                                        "name": "contacts",
+                                                        "title": "Оставьте Ваши контакты",
+                                                        "type": "text",
+                                                        "variables": [
+                                                          {
+                                                            "varname": "name",
+                                                            "vartitle": "Имя",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "phone",
+                                                            "vartitle": "Телефон",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "email",
+                                                            "datavalidator": ".+@.+\..+",
+                                                            "vartitle": "Электронная почта",
+                                                            "next": null
+                                                          }
+                                                        ]
+                                                      }
                                                     }
                                                   ]
                                                 }
