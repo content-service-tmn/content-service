@@ -5,14 +5,23 @@
   <div class="home__grid">
     <div class="home__cell home__cell_left">
       <div class="home__fixed-cell">
-        <div class="content">
-            <h2 class="content__heading">кейсы</h2>
-            <h3 class="content__subheading">мы создали это</h3>
-            <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
-            <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие»
-                запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача
-                привлечь максимальное количество целевого трафика по минимальной цене.)</p>
-        </div>
+          <div class="content">
+              <h2 class="content__heading"><?=$page->title?></h2>
+              <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
+              <p class="content__description"><?=$page->cases_content?></p>
+              <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
+              <ul class="content__items">
+                  <?php $prevs = $pages->find("template=case, id<".$page->id."sort=id"); if($prevs->count>0): ?>
+                      <li class="content__item"><a href="<?=$prevs[$prevs->count-1]->url?>" class="content__link content__link_left"><?=$prevs[$prevs->count-1]->title?></a></li>
+                  <?php else: ?>
+                      <li class="content_item"/>
+                  <?php endif; ?>
+                  <?php $nexts = $pages->find("template=case, id>".$page->id."sort=id"); if($nexts->count>0): ?>
+                      <li class="content__item"><a href="<?=$nexts[0]->url?>" class="content__link content__link_right"><?=$nexts[0]->title?></a></li>
+                  <?php endif; ?>
+              </ul>
+
+          </div>
       </div>
     </div>
     <div class="home__cell home__cell_right">
@@ -69,10 +78,10 @@
             <div class="indicators__grid">
               <div class="indicators__cell">
                 <h2 class="indicators__value">31</h2>
-                <p class="indicators__text">Количество заявок</p>
+                <p class="indicators__text">Количество заявок в месяц</p>
               </div>
               <div class="indicators__cell">
-                <h2 class="indicators__value">34%</h2>
+                <h2 class="indicators__value">45%</h2>
                 <p class="indicators__text">Рост продаж в рублях</p>
               </div>
               <div class="indicators__cell">

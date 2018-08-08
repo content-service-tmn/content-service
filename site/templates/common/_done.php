@@ -15,7 +15,7 @@
     <a class="uk-offcanvas-close"></a>
     <div class="uk-offcanvas-bar-inner sidebar">
       <ul class="sidebar__items">
-        <li class="sidebar__item"><a href="#main" data-uk-smoothscroll>главная</a></li>
+        <li class="sidebar__item"><a href="/" data-uk-smoothscroll>главная</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_work")->url?>">схема работы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_services")->url?>">услуги content service</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_cases")->url?>" data-uk-smoothscroll>кейсы</a></li>
