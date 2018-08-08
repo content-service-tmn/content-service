@@ -34,14 +34,12 @@
 <section class="home">
     <div class="home__grid">
         <div class="home__cell home__cell_left">
-          <div class="home__fixed-cell">
-            <div class="content is_hidden">
+          <div class="home__fixed-cell is_hidden">
+            <div class="content">
                 <h2 class="content__heading">кейсы</h2>
-                <h3 class="content__subheading">мы создали это</h3>
-                <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
-                <p class="content__description">(Реклама в поисковых системах Яндекс и Google. Собираем только «горячие»
-                    запросы той аудитории, кто готов покупать, а не тех, кто только мониторит рынок. Наша задача
-                    привлечь максимальное количество целевого трафика по минимальной цене.)</p>
+                <h3 class="content__subheading"><?=$pages->get("template=layout_cases")->case_title?></h3>
+                <p><span class="content__quote content__quote_case"><?=$pages->get("template=layout_cases")->cases_subtitle?></span></p>
+                <p class="content__description"><?=$pages->get("template=layout_cases")->cases_content?></p>
             </div>
           </div>
         </div>

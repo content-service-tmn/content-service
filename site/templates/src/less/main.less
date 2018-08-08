@@ -12,6 +12,19 @@
     top:0;
     left:0;
     width:50%;
+    opacity: 1;
+    visibility: visible;
+
+    &:not(.is_hidden) {
+      transition:all 0.4s ease;
+    }
+    &.is_hidden {
+      @media(min-width: 1024px) {
+        opacity:0;
+        visibility: hidden;
+        z-index:-1;
+      }
+    }
     @media(min-width: 1920px) {
       width:33.3333%;
     }
@@ -49,22 +62,12 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  opacity: 1;
-  visibility: visible;
+
   @media(max-width: 1023px) {
     padding:120px 60px;
   }
   @media(max-width: 767px) {
     padding:60px 20px;
-  }
-  &:not(.is_hidden) {
-    transition:all 0.4s ease;
-  }
-  &.is_hidden {
-    @media(min-width: 1024px) {
-      opacity:0;
-      visibility: hidden;
-    }
   }
 
   &__hello {

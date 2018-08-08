@@ -12,7 +12,7 @@
                 <h2 class="aside__name">content service</h2>
                 <p class="aside__slogan">Создаём прибыльные системы продаж в интернете</p>
                 <div class="aside__button">
-                    <a href="brief" class="button">заполнить бриф</a>
+                    <a href="/brief" class="button">заполнить бриф</a>
                 </div>
             </div>
           </div>
