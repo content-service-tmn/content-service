@@ -107,19 +107,19 @@ $brief_content = file_get_contents($page->brief_data->filename);
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
                 if (regex == "/pattern_validator/") {
-                    regex = /\w+/;
+                    regex = /[\w+, [А-я]+/;
                 }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
                     hasError = true;
                 }
                 innerAnswers[$(this).attr("data-title")] = $(this)[0].value;
+
             });
             if (hasError) {
                 return false;
             }
             answers[node.title] = innerAnswers;
-
             if (node.variables[0].next) {
                 buildNode(node.variables[0].next, currentid);
             } else {
@@ -159,7 +159,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             $(current).find(".brief-form__text").each(function () {
                 var regex = new RegExp($(this).attr("data-validator"));
                 if (regex == "/pattern_validator/") {
-                    regex = /\w+/;
+                    regex = /[\w+, [А-я]+/;
                 }
                 if (!regex.test($(this).val())) {
                     $(this).addClass("error");
