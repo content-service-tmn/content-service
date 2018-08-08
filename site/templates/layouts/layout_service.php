@@ -12,9 +12,9 @@
            <?=$page->service_content?>
           </ul>
           <p><span class="content__quote content__quote_<?=$page->service_quote_class?>"><?=$page->service_quote?></span></p>
-          <a href="" class="content__case content__case_<?=$page->service_quote_class?>">посмотреть кейсы</a>
+          <a href="<?=$pages->get("template=layout_cases")->url?>" class="content__case content__case_<?=$page->service_quote_class?>">посмотреть кейсы</a>
           <div class="content__button">
-            <a href="" class="button">рассчитать стоимость</a>
+            <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">рассчитать стоимость</a>
           </div>
         <ul class="content__items">
             <?php $prevs = $pages->find("template=layout_service, id<".$page->id."sort=id"); if($prevs->count>0): ?>
