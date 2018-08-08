@@ -5,11 +5,6 @@
 <section class="contacts">
   <div class="contacts__grid">
     <div class="contacts__cell contacts__cell_left">
-      <div class="contacts__image">
-        <div id="google-map" class="contacts__map"></div>
-      </div>
-    </div>
-    <div class="contacts__cell contacts__cell_right">
       <div class="content">
         <h2 class="content__heading">контакты</h2>
         <h3 class="contacts__name">email</h3>
@@ -24,6 +19,11 @@
           <li class="socials__icon socials__icon_inst"><a href="https://www.instagram.com/contentservice/" class="socials__link"></a></li>
           <li class="socials__icon socials__icon_fb"><a href="https://www.facebook.com/contentservice72" class="socials__link"></a></li>
         </ul>
+      </div>
+    </div>
+    <div class="contacts__cell contacts__cell_right">
+      <div class="contacts__image">
+        <div id="google-map" class="contacts__map"></div>
       </div>
     </div>
   </div>

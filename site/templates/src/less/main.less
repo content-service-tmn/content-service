@@ -10,8 +10,7 @@
   &__fixed-cell {
     position:fixed;
     top:0;
-    left:0;
-    width:50%;
+    width:~"calc(50% - 30px)";
     opacity: 1;
     visibility: visible;
 
@@ -25,8 +24,11 @@
         z-index:-1;
       }
     }
+    @media(min-width: 1024px) {
+      left:60px;
+    }
     @media(min-width: 1920px) {
-      width:33.3333%;
+      width:~"calc(33.3333% - 20px)";
     }
     @media(max-width: 1023px) {
       width:100%;
