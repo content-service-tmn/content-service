@@ -35,7 +35,7 @@
     <div class="home__grid">
         <div class="home__cell home__cell_left">
           <div class="home__fixed-cell">
-            <div class="content disabled">
+            <div class="content is_hidden">
                 <h2 class="content__heading">кейсы</h2>
                 <h3 class="content__subheading">мы создали это</h3>
                 <p><span class="content__quote content__quote_case">тут такое вот дело</span></p>
@@ -45,7 +45,7 @@
             </div>
           </div>
         </div>
-        <div id="cases" class="home__cell home__cell_right">
+        <div id="cases" class="home__cell home__cell_right" data-uk-scrollspy='{repeat: true}'>
           <div data-uk-slideset="{small: 1,medium: 2, animation: 'slide-horizontal'}">
             <ul class="cases uk-slideset">
               <?php foreach ($pages->find("template=case") as $pge): ?>
