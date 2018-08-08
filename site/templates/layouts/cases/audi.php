@@ -35,7 +35,7 @@
           <div class="case__cell case__cell_motul-dark case__cell_text">
             <h2>audi tyumen</h2>
             <h3>Ведение соц. сетей</h3>
-            <p>Один из самых ответственных кейсов по ведению социальных сетей. Все материалы согласовываются с Audi Rus. todo </p>
+            <p>Один из самых ответственных кейсов по ведению социальных сетей. Все материалы согласовываются с Audi Rus. </p>
           </div>
           <div class="case__cell case__cell_motul-light case__cell_text indicators">
             <h2>показатели в числах</h2>

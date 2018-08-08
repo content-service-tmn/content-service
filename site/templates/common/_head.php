@@ -31,6 +31,7 @@
     "assets/js/core/switcher.js",
     "assets/js/core/smooth-scroll.js",
     "assets/js/components/lightbox.js",
+    "assets/js/components/slider.js",
     "assets/js/components/notify.js",
     "assets/js/components/accordion.js",
     "assets/js/components/slideset.js",

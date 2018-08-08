@@ -116,9 +116,13 @@
   &__grid {
     display:flex;
     flex-wrap: wrap;
+    @media(min-width:1024px) {
+      height: 100vh;
+    }
   }
   &__cell {
-    height:310px;
+    height:33.3333%;
+    min-height: 200px;
     width:50%;
     position:relative;
     background-position: 50% 50%;
@@ -127,17 +131,35 @@
     @media(max-width: 767px) {
       width:100%;
     }
+    &:hover {
+      &>* {
+        opacity: 1;
+      }
+    }
+  }
+  &__overlay {
+    background-color:rgba(0,0,0,0.7);
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    opacity:0;
+    transition:all 0.3s;
   }
   &__link {
     position:absolute;
-    z-index:1;
+    z-index:2;
     left:0;
     right:0;
     top:0;
     bottom:0;
+    opacity:0;
+    transition:all 0.3s;
   }
   &__text {
     position:absolute;
+    z-index:1;
     left:0;
     bottom:0;
     box-sizing: border-box;
@@ -145,5 +167,10 @@
     max-width: 100%;
     padding:20px;
     color:white;
+    transition:all 0.3s;
+    opacity:0;
+    @media(max-width: 1200px) {
+      font-size:28px;
+    }
   }
 }
