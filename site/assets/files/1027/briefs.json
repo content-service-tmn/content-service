@@ -39,33 +39,44 @@
                               "varname": "yes",
                               "vartitle": "Да",
                               "next": {
-                                "name": "yourСompetitors",
-                                "title": "Кто Ваши конкуренты",
-                                "type": "textarea",
+                                "name": "siteAddress",
+                                "title": "Введите адрес вашего сайта",
+                                "type": "text",
                                 "variables": [
                                   {
-                                    "varname": "yourСompetitors",
-                                    "vartitle": "Кто Ваши конкуренты",
+                                    "varname": "address",
+                                    "vartitle" : "адрес",
                                     "next": {
-                                      "name": "contacts",
-                                      "title": "Оставьте Ваши контакты",
-                                      "type": "text",
+                                      "name": "yourСompetitors",
+                                      "title": "Кто Ваши конкуренты",
+                                      "type": "textarea",
                                       "variables": [
                                         {
-                                          "varname": "name",
-                                          "vartitle": "Имя",
-                                          "next": null
-                                        },
-                                        {
-                                          "varname": "phone",
-                                          "vartitle": "Телефон",
-                                          "next": null
-                                        },
-                                        {
-                                          "varname": "email",
-                                          "datavalidator": ".+@.+\..+",
-                                          "vartitle": "Электронная почта",
-                                          "next": null
+                                          "varname": "yourСompetitors",
+                                          "vartitle": "Кто Ваши конкуренты",
+                                          "next": {
+                                            "name": "contacts",
+                                            "title": "Оставьте Ваши контакты",
+                                            "type": "text",
+                                            "variables": [
+                                              {
+                                                "varname": "name",
+                                                "vartitle": "Имя",
+                                                "next": null
+                                              },
+                                              {
+                                                "varname": "phone",
+                                                "vartitle": "Телефон",
+                                                "next": null
+                                              },
+                                              {
+                                                "varname": "email",
+                                                "datavalidator": ".+@.+\..+",
+                                                "vartitle": "Электронная почта",
+                                                "next": null
+                                              }
+                                            ]
+                                          }
                                         }
                                       ]
                                     }
@@ -525,56 +536,88 @@
                               "varname": "yes",
                               "vartitle": "Да",
                               "next": {
-                                "name": "haveSocial",
-                                "title": "Есть ли соц. сети у Вашей компании?",
-                                "type": "radios",
+                                "name": "siteAddress",
+                                "title": "Введите адрес вашего сайта",
+                                "type": "text",
                                 "variables": [
                                   {
-                                    "varname": "yes",
-                                    "vartitle": "Да",
-                                    "next": {
-                                      "name": "yourСompetitors",
-                                      "title": "Кто Ваши конкуренты",
-                                      "type": "textarea",
+                                    "varname": "address",
+                                    "vartitle" : "адрес",
+                                    "next1": {
+                                      "name": "haveSocial",
+                                      "title": "Есть ли соц. сети у Вашей компании?",
+                                      "type": "radios",
                                       "variables": [
                                         {
-                                          "varname": "yourСompetitors",
-                                          "vartitle": "Кто Ваши конкуренты",
+                                          "varname": "yes",
+                                          "vartitle": "Да",
                                           "next": {
-                                            "name": "contacts",
-                                            "title": "Оставьте Ваши контакты",
+                                            "name": "socialAddress",
+                                            "title": "Ссылки на ваши соц. сети",
                                             "type": "text",
                                             "variables": [
                                               {
-                                                "varname": "name",
-                                                "vartitle": "Имя",
-                                                "next": null
+                                                "varname": "vkAddress",
+                                                "vartitle" : "Вконтакте",
+                                                "next": {
+                                                  "name": "yourСompetitors",
+                                                  "title": "Кто Ваши конкуренты",
+                                                  "type": "textarea",
+                                                  "variables": [
+                                                    {
+                                                      "varname": "yourСompetitors",
+                                                      "vartitle": "Кто Ваши конкуренты",
+                                                      "next": {
+                                                        "name": "contacts",
+                                                        "title": "Оставьте Ваши контакты",
+                                                        "type": "text",
+                                                        "variables": [
+                                                          {
+                                                            "varname": "name",
+                                                            "vartitle": "Имя",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "phone",
+                                                            "vartitle": "Телефон",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "email",
+                                                            "datavalidator": ".+@.+\..+",
+                                                            "vartitle": "Электронная почта",
+                                                            "next": null
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
                                               },
                                               {
-                                                "varname": "phone",
-                                                "vartitle": "Телефон",
-                                                "next": null
+                                                "varname": "instaAsdress",
+                                                "vartitle" : "Instagram",
+                                                "next":{}
                                               },
                                               {
-                                                "varname": "email",
-                                                "datavalidator": ".+@.+\..+",
-                                                "vartitle": "Электронная почта",
-                                                "next": null
+                                                "varname": "fbAddress",
+                                                "vartitle" : "Facebook",
+                                                "next":{}
                                               }
                                             ]
                                           }
+                                        },
+                                        {
+                                          "varname": "no",
+                                          "vartitle": "Нет",
+                                          "next": {
+                                            "name": "yourСompetitors",
+                                            "title": "Кто Ваши конкуренты",
+                                            "type": "textarea",
+                                            "variables": null
+                                          }
                                         }
                                       ]
-                                    }
-                                  },
-                                  {
-                                    "varname": "no",
-                                    "vartitle": "Нет",
-                                    "next": {
-                                      "name": "yourСompetitors",
-                                      "title": "Кто Ваши конкуренты",
-                                      "type": "textarea",
-                                      "variables": null
                                     }
                                   }
                                 ]
@@ -805,41 +848,52 @@
                                     "varname": "yes",
                                     "vartitle": "Да",
                                     "next": {
-                                      "name": "yourСompetitors",
-                                      "title": "Кто Ваши конкуренты",
-                                      "type": "textarea",
+                                      "name": "siteAddress",
+                                      "title": "Введите адрес вашего сайта",
+                                      "type": "text",
                                       "variables": [
                                         {
-                                          "varname": "yourСompetitors",
-                                          "vartitle": "Кто Ваши конкуренты",
+                                          "varname": "address",
+                                          "vartitle" : "адрес",
                                           "next": {
-                                            "name": "benefits",
-                                            "title": "Чем отличается Ваш бренд от других?",
+                                            "name": "yourСompetitors",
+                                            "title": "Кто Ваши конкуренты",
                                             "type": "textarea",
                                             "variables": [
                                               {
-                                                "varname": "benefits",
-                                                "vartitle": "Чем отличается Ваш бренд от других?",
+                                                "varname": "yourСompetitors",
+                                                "vartitle": "Кто Ваши конкуренты",
                                                 "next": {
-                                                  "name": "contacts",
-                                                  "title": "Оставьте Ваши контакты",
-                                                  "type": "text",
+                                                  "name": "benefits",
+                                                  "title": "Чем отличается Ваш бренд от других?",
+                                                  "type": "textarea",
                                                   "variables": [
                                                     {
-                                                      "varname": "name",
-                                                      "vartitle": "Имя",
-                                                      "next": null
-                                                    },
-                                                    {
-                                                      "varname": "phone",
-                                                      "vartitle": "Телефон",
-                                                      "next": null
-                                                    },
-                                                    {
-                                                      "varname": "email",
-                                                      "datavalidator": ".+@.+\..+",
-                                                      "vartitle": "Электронная почта",
-                                                      "next": null
+                                                      "varname": "benefits",
+                                                      "vartitle": "Чем отличается Ваш бренд от других?",
+                                                      "next": {
+                                                        "name": "contacts",
+                                                        "title": "Оставьте Ваши контакты",
+                                                        "type": "text",
+                                                        "variables": [
+                                                          {
+                                                            "varname": "name",
+                                                            "vartitle": "Имя",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "phone",
+                                                            "vartitle": "Телефон",
+                                                            "next": null
+                                                          },
+                                                          {
+                                                            "varname": "email",
+                                                            "datavalidator": ".+@.+\..+",
+                                                            "vartitle": "Электронная почта",
+                                                            "next": null
+                                                          }
+                                                        ]
+                                                      }
                                                     }
                                                   ]
                                                 }
