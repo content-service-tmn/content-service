@@ -617,8 +617,37 @@
                                             "name": "yourСompetitors",
                                             "title": "Кто Ваши конкуренты",
                                             "type": "textarea",
-                                            "variables": null
+                                            "variables": [
+                                              {
+                                                "varname": "yourСompetitors",
+                                                "vartitle": "Кто Ваши конкуренты",
+                                                "next": {
+                                                  "name": "contacts",
+                                                  "title": "Оставьте Ваши контакты",
+                                                  "type": "text",
+                                                  "variables": [
+                                                    {
+                                                      "varname": "name",
+                                                      "vartitle": "Имя",
+                                                      "next": null
+                                                    },
+                                                    {
+                                                      "varname": "phone",
+                                                      "vartitle": "Телефон",
+                                                      "next": null
+                                                    },
+                                                    {
+                                                      "varname": "email",
+                                                      "datavalidator": ".+@.+\..+",
+                                                      "vartitle": "Электронная почта",
+                                                      "next": null
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
                                           }
+
                                         }
                                       ]
                                     }
