@@ -5,8 +5,8 @@
     <div class="work__grid">
         <div class="work__cell work__cell_left">
             <div class="work__pyramid pyramid">
-                <svg class="pyramid__svg" viewBox="0 0 485 992" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g class="">
+                <svg class="pyramid__svg svg" viewBox="0 0 485 992" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg__group" data-svg-id="1058">
                         <path d="M400.1 0.0999756C445.2 20.9 473.4 50.3 473.4 82.9C473.4 146.1 367.4 197.3 236.7 197.3C106 197.3 0 146.1 0 82.9C0 50.3 28.3 20.8 73.7 0"
                               transform="translate(1.93359 735.479) rotate(-1.45991)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
@@ -14,7 +14,7 @@
                               transform="translate(2.88721 816.082) rotate(-1.45991)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
                     </g>
-                    <g class="">
+                    <g class="svg__group" data-svg-id="1055">
                         <path d="M181.7 0C209.9 7.5 228.2 19.6 228.2 33.3C228.2 56.1 177.2 74.6 114.1 74.6C51.1 74.6 0 56.1 0 33.3C0 25.4 6 18 16.7 11.8"
                               transform="translate(121.057 581.393) rotate(-4.40057)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
@@ -28,7 +28,7 @@
                               transform="translate(164.024 622.317) rotate(-4.40057)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
                     </g>
-                    <g class="">
+                    <g class="svg__group" data-svg-id="1052">
                         <path d="M0.00838595 23.3609C-0.560539 18.1121 27.8857 3.27404 64.8658 0.447739C101.846 -2.27762 132.909 8.1191 133.364 13.267"
                               transform="translate(160.711 490.299) rotate(-8.64017)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
@@ -39,7 +39,7 @@
                               transform="translate(122.422 460.263) rotate(-8.64017)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
                     </g>
-                    <g class="">
+                    <g class="svg__group" data-svg-id="1041">
                         <path d="M67.292 70.1489C109.892 85.2489 149.392 84.1489 155.292 67.7489C161.192 51.2489 131.392 25.6489 88.792 10.6489C46.192 -4.45106 6.69201 -3.35106 0.792014 13.0489C-5.30799 29.4489 24.492 54.9489 67.292 70.1489Z"
                               transform="translate(133.45 273.783) rotate(6.47409)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
@@ -50,7 +50,7 @@
                               transform="translate(147.951 317.093) rotate(6.47409)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
                     </g>
-                    <g class="active">
+                    <g class="svg__group is_active" data-svg-id="1040">
                         <path d="M0 150.1C0.6 148.4 23.5 108.8 38 70C51.1 34.9 55.9 0 55.9 0"
                               transform="translate(126.8 32.2)" stroke="#BB0B00" stroke-width="2"
                               stroke-miterlimit="10"/>
@@ -80,17 +80,19 @@
         <div class="work__cell work__cell_right">
             <div class="content">
                 <h2 class="content__heading">схема работы</h2>
-                <div class="uk-accordion work__accordion" data-uk-accordion>
+                <div id="#accordion" class="uk-accordion work__accordion" data-uk-accordion>
                     <?php foreach ($page->work_steps as $step): ?>
+                      <div class="accordion__item" data-id="<?=$step->id; ?>">
                         <h3 class="uk-accordion-title"><?= $step->work_title ?></h3>
                         <div class="uk-accordion-content">
-                            <?php foreach ($step->work_content as $content): ?>
-                                <p>
-                                    <span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span>
-                                </p>
-                                <p class="content__description"><?= $content->work_text ?></p>
-                            <?php endforeach; ?>
+                          <?php foreach ($step->work_content as $content): ?>
+                            <p>
+                              <span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span>
+                            </p>
+                            <p class="content__description"><?= $content->work_text ?></p>
+                          <?php endforeach; ?>
                         </div>
+                      </div>
                     <?php endforeach; ?>
                 </div>
             </div>

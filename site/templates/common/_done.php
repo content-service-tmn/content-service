@@ -89,7 +89,25 @@
 
 
 <?php if(!$config->ajax): ?>
-
+<?php if($page->template->name=='layout_contacts'): ?>
+  <script type="text/javascript">
+  function initMap() {
+    var coordinates= {lat: 57.1419482, lng: 65.5986856},
+        options = {
+          zoom: 16,
+          disableDefaultUI: true,
+          center: coordinates,
+          draggable: !("ontouchend" in document)
+        };
+    var map = new google.maps.Map(document.getElementById('google-map'), options);
+    $.getJSON('/google-map.json',function(data){
+      map.setOptions({styles:data});
+    });
+    new google.maps.Marker({map:map,position:coordinates});
+  }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap" async></script>
+<?php endif?>
 </body>
 
 </html>
