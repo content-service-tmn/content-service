@@ -33,6 +33,12 @@ a {
   text-decoration: none;
   color:black;
 }
+a,input,button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  &:focus {
+    outline:none;
+  }
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
