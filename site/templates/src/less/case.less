@@ -17,6 +17,9 @@
     }
     &_text {
       padding:90px 60px;
+      @media(max-width: 767px) {
+        padding:60px 20px;
+      }
       &>*+* {
         margin-top:30px;
       }
@@ -63,6 +66,9 @@
 .switcher {
   padding:90px 60px;
   background-color:rgba(0,0,0,0.04);
+  @media(max-width: 767px) {
+    padding:60px 20px;
+  }
   &__buttons {
     display:flex;
     margin-bottom:30px;
@@ -90,6 +96,9 @@
       font-family: "icomoon";
       font-size:120px;
       display:inline-block;
+      @media(max-width: 767px) {
+        font-size:70px;
+      }
     }
     &_desktop:before {
       content:"\e901";
