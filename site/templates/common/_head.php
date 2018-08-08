@@ -1,7 +1,7 @@
-<title><?= ($page->seo_title) ? $page->seo_title : $page->title; ?></title>
+<title><?= ($page->site_seo_title) ? $page->site_seo_title : $page->title; ?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="<?= $page->seo_description; ?>" />
+<meta name="description" content="<?= $page->site_seo_description; ?>" />
 <meta name="apple-mobile-web-app-title" content="Content Service">
 <meta name="application-name" content="Content Service">
 <meta name="msapplication-TileColor" content="#000000">

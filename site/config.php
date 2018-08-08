@@ -46,8 +46,8 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  */
 
 $config->dbHost = 'localhost';
-$config->dbName = 'cw40247_prod';
-$config->dbUser = 'cw40247_prod';
+$config->dbName = 'cu49180_prod';
+$config->dbUser = 'cu49180_prod';
 $config->dbPass = 'AuSw495y';
 $config->dbPort = '3306';
 
@@ -92,4 +92,4 @@ $config->installed = 1532435276;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('cw40247.tmweb.ru', 'localhost:8888');
+$config->httpHosts = array('contentservice.agency');
