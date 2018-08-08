@@ -49,12 +49,24 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  opacity: 1;
+  visibility: visible;
   @media(max-width: 1023px) {
     padding:120px 60px;
   }
   @media(max-width: 767px) {
     padding:60px 20px;
   }
+  &:not(.is_hidden) {
+    transition:all 0.4s ease;
+  }
+  &.is_hidden {
+    @media(min-width: 1024px) {
+      opacity:0;
+      visibility: hidden;
+    }
+  }
+
   &__hello {
     margin-top:70px;
     font-size: 144px;
@@ -129,11 +141,5 @@
     max-width: 100%;
     padding:20px;
     color:white;
-  }
-}
-
-.disabled {
-  @media(min-width:1024px) {
-    display:none;
   }
 }

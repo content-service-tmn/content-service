@@ -25,6 +25,7 @@
     "assets/js/core/core.js",
     "assets/js/core/modal.js",
     "assets/js/core/utility.js",
+    "assets/js/core/touch.js",
     "assets/js/core/scrollspy.js",
     "assets/js/core/offcanvas.custom.js",
     "assets/js/core/switcher.js",
@@ -38,4 +39,3 @@
 ?>
 <link rel="stylesheet" type="text/css" href="<?= $css; ?>">
 <script src="<?= $js; ?>"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap" async defer></script>

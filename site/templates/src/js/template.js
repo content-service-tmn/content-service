@@ -140,20 +140,22 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
+    $('#cases').on('inview.uk.scrollspy', function(){
+      $('.aside').toggleClass('is_hidden');
+      $('.content').toggleClass('is_hidden');
+    });
+    $('#cases').on('outview.uk.scrollspy', function(){
+      $('.content').toggleClass('is_hidden');
+      $('.aside').toggleClass('is_hidden');
+    });
 
+    $('.accordion__item').on('click', function() {
+      var id = $(this).attr('data-id');
+      $('.svg__group').each(function() {
+        $(this).removeClass('is_active');
+      });
+      $('[data-svg-id="' + id + '"]').addClass('is_active');
+    });
+
+    
 });
-
-function initMap() {
-  var coordinates= {lat: 57.1419482, lng: 65.5986856},
-      options = {
-        zoom: 16,
-        disableDefaultUI: true,
-        center: coordinates,
-        draggable: !("ontouchend" in document)
-      };
-  var map = new google.maps.Map(document.getElementById('google-map'), options);
-  $.getJSON('/google-map.json',function(data){
-    map.setOptions({styles:data});
-  });
-  new google.maps.Marker({map:map,position:coordinates});
-}
