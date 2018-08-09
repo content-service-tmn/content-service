@@ -56,12 +56,13 @@
             <p>В июне мы получили всего 3 заявки, но наладили систему.</p> <p>В июле число заявок и просмотров выросло до 8.</p>
             <p>Это, конечно, не десятки заявок, но при среднем чеке от 5 миллионов рублей - каждая заявка способна окупить полгода рекламы.</p>
             <p>P. S. это яркий пример, как сайт, оптимизированный под мобильные устройства, влияет на продажи!</p>
+            <p>P. S. S. С начала августа с сайта получено 17 заявок </p>
           </div>
           <div class="case__cell case__cell_motul-light case__cell_text indicators">
             <h2>показатели в числах</h2>
             <div class="indicators__grid">
               <div class="indicators__cell">
-                <h2 class="indicators__value indicators__value_black">11</h2>
+                <h2 class="indicators__value indicators__value_black">17</h2>
                 <p class="indicators__text">Количество заявок</p>
               </div>
               <div class="indicators__cell">
@@ -69,7 +70,7 @@
                 <p class="indicators__text">Цена клика</p>
               </div>
               <div class="indicators__cell">
-                <h2 class="indicators__value indicators__value_black">0.56%</h2>
+                <h2 class="indicators__value indicators__value_black">1.63%</h2>
                 <p class="indicators__text">Конверсия <br>в заявку</p>
               </div>
             </div>
