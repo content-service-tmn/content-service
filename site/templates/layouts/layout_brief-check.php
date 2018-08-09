@@ -28,7 +28,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                         <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name">
                     </div>
                 </form>
-                <div class="brief__submit submit">далее</div>
+                <!--<div class="brief__submit submit">далее</div>-->
             </div>
 </section>
 <section id="brief_multiply" style="display: none">
@@ -41,7 +41,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 <textarea id="text" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" rows="1"></textarea>
             </div>
         </form>
-        <div class="brief__submit submit">далее</div>
+        <!--<div class="brief__submit submit">далее</div>-->
     </div>
 </section>
 <section id="brief_radios" style="display: none">
@@ -54,8 +54,12 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 <label for="pattern_id">patter_text</label>
             </div>
         </form>
-        <div class="brief__submit submit">далее</div>
+        <!--<div class="brief__submit submit">далее</div>-->
     </div>
+</section>
+
+<section id="submit_button" style="display: none">
+	<div class="brief__submit submit">далее</div>
 </section>
 <!--End templates area-->
 
@@ -71,6 +75,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
         node.variables.forEach(function (item) {
             variables += item_html.replace(/patter_text/g, item.vartitle).replace(/pattern_id/g, currentid++);
         });
+        variables += $("#submit_button").html();
         item.html(variables);
         current.find(".submit").on("click", function (e) {
             var answer = current.find("input:checked");
@@ -97,8 +102,8 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 variable = variable.replace(/pattern_validator/g, item.datavalidator);
             }
             variables += variable;
-
         });
+        variables += $("#submit_button").html();
         item.html(variables);
         errorsHandler()();
         $(".submit").on("click", function () {
@@ -151,6 +156,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
             }
             variables += variable;
         });
+        variables += $("#submit_button").html();
         item.html(variables);
         errorsHandler()();
         $(".submit").on("click", function () {
