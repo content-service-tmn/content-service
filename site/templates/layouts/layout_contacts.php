@@ -13,7 +13,7 @@
         <a href="tel:<?=phoneLink($page->contacts_phone)?>" class="contacts__value"><?=$page->contacts_phone?></a>
         <h3 class="contacts__name">адрес</h3>
         <p class="contacts__value"><?=$page->contacts_address?></p>
-        <h3 class="contacts__name">соц. сети</h3>
+        <h3 class="contacts__name">соцсети</h3>
         <ul class="contacts__socials socials">
           <li class="socials__icon socials__icon_vk"><a href="https://vk.com/content_service" class="socials__link"></a></li>
           <li class="socials__icon socials__icon_inst"><a href="https://www.instagram.com/contentservice/" class="socials__link"></a></li>
