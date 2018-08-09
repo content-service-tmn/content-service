@@ -8,7 +8,7 @@
         <div class="content">
             <h2 class="content__heading"><?=$page->title?></h2>
             <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
-            <p class="content__description"><?=$page->cases_content?></p>
+            <p class="content__text"><?=$page->cases_content?></p>
             <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
             <ul class="content__items">
                 <?php $prevs = $pages->find("template=case, id<".$page->id."sort=id"); if($prevs->count>0): ?>
