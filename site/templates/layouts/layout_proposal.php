@@ -17,9 +17,8 @@ $service_page = $pages->get("id=".$links[$_GET["from"]]);
       <div class="content">
         <h2 class="content__heading content__heading_white">привет!</h2>
           <h3 class="content__subheading">Мы знали, что вы вернетесь :)</h3>
-          <p>Так как вы интересовались <span class="content__quote content__quote_case"><?=$service_page->service_proposal_title?></span> - предлагаем Вам заполнить наш бриф!</p>
-          <p class="content__description">А мы в свою очередь подготовим для Вас <?=$service_page->service_proposal_content?></p><br>
-          	<p><?=$service_page->service_quote?></p>
+          <p>Так как вы интересовались <span class="content__quote content__quote_case"><?=$service_page->service_proposal_title?></span> - предлагаем Вам оставить заявку!</p>
+          <p class="content__description"><?=$service_page->service_proposal_content?></p>
           <br>
           <p>До связи!</p>
           <div class="content__button">
