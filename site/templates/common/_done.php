@@ -107,6 +107,7 @@
   }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap" async></script>
+  <script src="//cdn.callibri.ru/callibri.js"; type="text/javascript" charset="utf-8"></script>
 <?php endif?>
 </body>
 
