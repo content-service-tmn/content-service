@@ -91,6 +91,15 @@ $brief_content = file_get_contents($page->brief_data->filename);
     }
     function buildText(node, currentid) {
         var current = $("#current_quest");
+        node.variables.forEach(function(item) {
+        	var haveNext = false;
+        	if (item.next != null){
+        		haveNext = true;
+        	}
+        	if (!haveNext){
+        		current.addClass("last_question");
+        	}
+        });
         current.html($("#brief_text").html());
         current.html(current.html().replace("pattern_title", node.title));
         var item = current.find("form");
