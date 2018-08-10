@@ -25,7 +25,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 <form class="brief__form form">
                     <div class="form__element form__element_brief">
                         <label class="label" for="namepattern_id">pattern_text</label>
-                        <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="name">
+                        <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="pattern_name">
                     </div>
                 </form>
                 <!--<div class="brief__submit submit">далее</div>-->
@@ -100,6 +100,11 @@ $brief_content = file_get_contents($page->brief_data->filename);
             var variable = item_html.replace(/pattern_text/g, item.vartitle).replace(/pattern_id/g ,currentid++);
             if (item.datavalidator != undefined){
                 variable = variable.replace(/pattern_validator/g, item.datavalidator);
+            }
+            if (item.input_name != undefined) {
+            	variable = variable.replace(/pattern_name/g, item.input_name);
+            } else {
+            	variable = variable.replace(/pattern_name/g, item.varname);
             }
             variables += variable;
         });
