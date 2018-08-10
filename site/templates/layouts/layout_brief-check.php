@@ -219,6 +219,9 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 buildMultiply(node, currentid);
                 break;
         }
+        $(function() { 
+			callibriInit() 
+		}); 
 
     }
 
