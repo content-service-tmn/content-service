@@ -9,7 +9,7 @@
           <div class="home__fixed-cell">
             <div class="aside">
                 <h1 class="aside__hello">hello</h1>
-                <h2 class="aside__name">content service</h2>
+                <a href="<?=$pages->get("template=layout_about_us")->url?>"><h2 class="aside__name">content service</h2></a>
                 <p class="aside__slogan">Создаём прибыльные системы продаж в интернете</p>
                 <div class="aside__button">
                     <a href="brief" class="button">заполнить бриф</a>
