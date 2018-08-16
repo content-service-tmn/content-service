@@ -8,13 +8,14 @@
     &_left {
       width:66.6667%;
       @media(max-width: 1023px) {
-        width:100%; 
+        width:100%;
       }
     }
     &_right {
-      width:33.3333%;
+      width:~"calc(33.3333% - 20px)";
       position:fixed;
-      left:66.6667%;
+      top:0;
+      left:~"calc(66.6667% + 20px)";
       height:100vh;
       background-repeat: no-repeat;
       background-size: cover;

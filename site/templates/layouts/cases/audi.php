@@ -8,7 +8,7 @@
         <div class="content">
             <h2 class="content__heading"><?=$page->title?></h2>
             <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
-            <p class="content__description"><?=$page->cases_content?></p>
+            <p class="content__text"><?=$page->cases_content?></p>
             <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
             <ul class="content__items">
                 <?php $prevs = $pages->find("template=case, id<".$page->id."sort=id"); if($prevs->count>0): ?>
@@ -34,8 +34,8 @@
         <div class="case__grid">
           <div class="case__cell case__cell_motul-dark case__cell_text">
             <h2>audi tyumen</h2>
-            <h3>Ведение соц. сетей</h3>
-            <p>Один из самых ответственных кейсов по ведению социальных сетей. Все материалы согласовываются с Audi Rus. todo </p>
+            <h3>Ведение соцсетей</h3>
+            <p>Один из самых ответственных кейсов по ведению социальных сетей. Все материалы согласовываются с Audi Rus. </p>
           </div>
           <div class="case__cell case__cell_motul-light case__cell_text indicators">
             <h2>показатели в числах</h2>
@@ -45,15 +45,15 @@
                 <p class="indicators__text">Вовлеченность</p>
               </div>
               <div class="indicators__cell">
-                <h2 class="indicators__value">10114</h2>
-                <p class="indicators__text">Количество лайков в мес.</p>
+                <h2 class="indicators__value">10 114</h2>
+                <p class="indicators__text">Количество лайков в месяц</p>
               </div>
               <div class="indicators__cell">
                 <h2 class="indicators__value">343</h2>
                 <p class="indicators__text">Рост числа подписчиков в месяц</p>
               </div>
               <div class="indicators__cell">
-                <h2 class="indicators__value">20192</h2>
+                <h2 class="indicators__value">20 192</h2>
                 <p class="indicators__text">Охват в месяц</p>
               </div>
             </div>

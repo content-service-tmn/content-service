@@ -6,6 +6,15 @@
   &__cell {
     box-sizing: border-box;
     &_left {
+      width:66.6667%;
+      @media(min-width: 1920px) {
+        width:50%;
+      }
+      @media(max-width: 1023px) {
+        width:100%;
+      }
+    }
+    &_right {
       width:33.3333%;
       @media(min-width: 1920px) {
         width:50%;
@@ -16,15 +25,6 @@
       }
       @media(max-width: 767px) {
         order:0;
-      }
-    }
-    &_right {
-      width:66.6667%;
-      @media(min-width: 1920px) {
-        width:50%;
-      }
-      @media(max-width: 1023px) {
-        width:100%;
       }
     }
   }

@@ -19,7 +19,7 @@
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_work")->url?>">схема работы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_services")->url?>">услуги content service</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_cases")->url?>" data-uk-smoothscroll>кейсы</a></li>
-        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_about_us")->url?>">об агенстве</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_about_us")->url?>">об агентстве</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_brief-check")->url?>">бриф</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_contacts")->url?>">контакты</a></li>
       </ul>
@@ -107,9 +107,10 @@
   }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap" async></script>
+
 <?php endif?>
 </body>
 
 </html>
-
+<script src="//cdn.callibri.ru/callibri.js"; type="text/javascript" charset="utf-8"></script>
 <?php endif?>

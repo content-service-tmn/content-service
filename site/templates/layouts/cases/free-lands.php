@@ -8,7 +8,7 @@
           <div class="content">
               <h2 class="content__heading"><?=$page->title?></h2>
               <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
-              <p class="content__description"><?=$page->cases_content?></p>
+              <p class="content__text"><?=$page->cases_content?></p>
               <br>
               <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
               <ul class="content__items">
@@ -30,9 +30,9 @@
         <div class="case__grid">
           <div class="case__cell case__cell_free-lands case__cell_text">
             <h2>вольные угодья</h2>
-            <p>Вольные угодья - поселок недалеко от Тюмени. У этого проекта уже был сайт!</p>
+            <p>Вольные угодья — поселок недалеко от Тюмени. У этого проекта уже был сайт!</p>
             <p>Почему нам пришлось делать новый?</p>
-            <p>1) Предыдущий сайт не был оптимизирован под мобильные устройства - как следствие потеря 63% приходящего трафика</p>
+            <p>1) Предыдущий сайт не был оптимизирован под мобильные устройства,как следствие, — потеря 63% приходящего трафика</p>
             <p>2) Отсутствовала информация об участках</p>
             <p>3) Не было заявочных форм</p>
             <p>4) Не было карты участков</p>

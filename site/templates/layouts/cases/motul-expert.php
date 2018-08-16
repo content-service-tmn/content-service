@@ -8,7 +8,7 @@
           <div class="content">
               <h2 class="content__heading"><?=$page->title?></h2>
               <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
-              <p class="content__description"><?=$page->cases_content?></p>
+              <p class="content__text"><?=$page->cases_content?></p>
               <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
               <ul class="content__items">
                   <?php $prevs = $pages->find("template=case, id<".$page->id."sort=id"); if($prevs->count>0): ?>
@@ -71,7 +71,9 @@
         <div class="case__grid">
           <div class="case__cell case__cell_motul-dark case__cell_text">
             <h2>рекламная кампания</h2>
-            <p>Мы настраивали рекламные кампании в Яндекс, настраивали call tracking и в первый же месяц обнаружили слабые места мастера-приемщика. Которые в скором времени устранили и получили в среднем 30 заявок в месяц в июле 2018 года на 45% увеличили оборот в рублях по отношению к июлю 2017 года.</p>
+            <p>
+              Мы настроили рекламные кампании в Яндекс и подключили Call tracking. В первый же месяц обнаружили слабые места мастера-приемщика, которые в скором времени устранили. Благодаря этим действиям было получено в среднем 30 заявок в месяц, и в июле 2018 года на 45% увеличили оборот в рублях по отношению к июлю 2017 года.
+            </p>
           </div>
           <div class="case__cell case__cell_motul-light case__cell_text indicators">
             <h2>показатели в числах</h2>
