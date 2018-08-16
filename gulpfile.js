@@ -58,7 +58,7 @@ var config = {
     //     baseDir: "./"
     // },
     //tunnel: true,
-    proxy: 'cservice.loc' //openserver
+    proxy: 'http://cs.loc' //openserver
     // port: 9000
     //logPrefix: "Frontend_Devil"
 };
