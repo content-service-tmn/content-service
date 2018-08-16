@@ -12,7 +12,7 @@
                 <h2 class="aside__name">content service</h2>
                 <p class="aside__slogan">Создаём прибыльные системы продаж в интернете</p>
                 <div class="aside__button">
-                    <a href="brief" class="button">заполнить бриф</a>
+                    <a href="/brief" class="button">заполнить бриф</a>
                 </div>
             </div>
           </div>
@@ -22,6 +22,7 @@
             <div class="services__grid">
               <?php foreach ($pages->find("template=layout_service") as $service): ?>
                 <div class="services__cell" style="background-image:url('<?= $service->service_image->url ?>')">
+                  <div class="services__overlay"></div>
                   <a href="<?= $service->url ?>" class="services__link"></a>
                   <h3 class="services__text"><?= $service->service_title ?></h3>
                 </div>

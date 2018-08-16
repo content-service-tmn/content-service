@@ -3,11 +3,8 @@
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="about">
-  <div class="about__grid">
+  <div class="about__grid">    
     <div class="about__cell about__cell_left">
-      <div class="about__image" style="background-image:url('<?=$config->urls->templates?>assets/img/contacts.png')"></div>
-    </div>
-    <div class="about__cell about__cell_right">
       <div class="content">
         <div class="about__items">
           <div class="about__item">
@@ -30,6 +27,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="about__cell about__cell_right">
+      <div class="about__image" style="background-image:url('<?=$config->urls->templates?>assets/img/contacts.png')"></div>
     </div>
   </div>
 </section>

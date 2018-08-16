@@ -6,7 +6,7 @@
   &__cell {
     box-sizing: border-box;
     &_left {
-      width:40%;
+      width:60%;
       @media(min-width: 1440px) {
         width:50%;
       }
@@ -15,7 +15,7 @@
       }
     }
     &_right {
-      width:60%;
+      width:40%;
       @media(min-width: 1440px) {
         width:50%;
       }
@@ -35,14 +35,16 @@
 .pyramid {
   height:100vh;
   position:fixed;
-  left:0;
+  left:~"calc(60% + 24px)";
   top:0;
-  width:40%;
+  width:~"calc(40% - 24px)";
   @media(min-width: 1440px) {
-    width:50%;
+    width:~"calc(50% - 30px)";
+    left:~"calc(50% + 30px)";
   }
   @media(max-width: 1023px) {
     position:relative;
+    left:0;
     width:100%;
   }
   &__svg {

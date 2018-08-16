@@ -3,7 +3,7 @@ namespace Processwire;
 if ($config->ajax) {
     $m = $mail->new();
     $m->to($page->ajax_email_for_callback);
-    $m->from('bot@ck06258.tmweb.ru')
+    $m->from('bot@contentservice.agency')
         ->fromName("Content-service")
         ->subject('Обращение с сайта');
     $messageBody = "Новая заявка с сайта: \r\n";

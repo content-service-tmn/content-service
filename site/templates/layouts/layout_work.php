@@ -4,6 +4,26 @@
 <section class="work">
     <div class="work__grid">
         <div class="work__cell work__cell_left">
+            <div class="content">
+                <h2 class="content__heading">схема работы</h2>
+                <div id="#accordion" class="uk-accordion work__accordion" data-uk-accordion>
+                    <?php foreach ($page->work_steps as $step): ?>
+                      <div class="accordion__item" data-id="<?=$step->id; ?>">
+                        <h3 class="uk-accordion-title"><?= $step->work_title ?></h3>
+                        <div class="uk-accordion-content">
+                          <?php foreach ($step->work_content as $content): ?>
+                            <p>
+                              <span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span>
+                            </p>
+                            <p class="content__description"><?= $content->work_text ?></p>
+                          <?php endforeach; ?>
+                        </div>
+                      </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <div class="work__cell work__cell_right">
             <div class="work__pyramid pyramid">
                 <svg class="pyramid__svg svg" viewBox="0 0 485 992" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g class="svg__group" data-svg-id="1058">
@@ -73,28 +93,6 @@
                     <li class="pyramid__item"><?= $step->work_title ?></li>
                     <?php endforeach; ?>
                 </ul>
-            </div>
-        </div>
-
-
-        <div class="work__cell work__cell_right">
-            <div class="content">
-                <h2 class="content__heading">схема работы</h2>
-                <div id="#accordion" class="uk-accordion work__accordion" data-uk-accordion>
-                    <?php foreach ($page->work_steps as $step): ?>
-                      <div class="accordion__item" data-id="<?=$step->id; ?>">
-                        <h3 class="uk-accordion-title"><?= $step->work_title ?></h3>
-                        <div class="uk-accordion-content">
-                          <?php foreach ($step->work_content as $content): ?>
-                            <p>
-                              <span class="content__quote content__quote_case"><?= $content->work_subtitle ?></span>
-                            </p>
-                            <p class="content__description"><?= $content->work_text ?></p>
-                          <?php endforeach; ?>
-                        </div>
-                      </div>
-                    <?php endforeach; ?>
-                </div>
             </div>
         </div>
 </section>
