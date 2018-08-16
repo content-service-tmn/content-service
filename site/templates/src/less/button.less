@@ -10,9 +10,65 @@
   display:inline-block;
   text-align: center;
   transition:all 0.2s;
+  @media(max-width: 1399px) {
+    font-size:20px;
+  }
   &:hover {
     color:white;
     background-color:black;
-
+  }
+  &_content {
+    border-color:rgb(255, 124, 124);
+    background-color:rgb(255, 124, 124);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgb(255, 124, 124);
+    }
+  }
+  &_site {
+    border-color:rgba(100,234,255, 1);
+    background-color:rgba(100,234,255, 1);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgba(100,234,255, 1);
+    }
+  }
+  &_context {
+    border-color:rgba(255, 208, 0, 1);
+    background-color:rgba(255, 208, 0, 1);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgba(255, 208, 0, 1);
+    }
+  }
+  &_crm {
+    border-color:rgba(61, 243, 229, 1);
+    background-color:rgba(61, 243, 229, 1);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgba(61, 243, 229, 1);
+    }
+  }
+  &_target {
+    border-color:rgba(255, 167, 60, 1);
+    background-color:rgba(255, 167, 60, 1);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgba(255, 167, 60, 1);
+    }
+  }
+  &_brand {
+    border-color:rgba(142, 45, 212, 1);
+    background-color:rgba(142, 45, 212, 1);
+    color:white;
+    &:hover {
+      background-color:transparent;
+      color:rgba(142, 45, 212, 1);
+    }
   }
 }

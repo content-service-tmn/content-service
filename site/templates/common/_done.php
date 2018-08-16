@@ -56,7 +56,7 @@
     <div class="uk-offcanvas-bar-inner sidebar">
       <div class="callback sidebar__callback">
         <form id="callback__form1" class="callback__form form" action="/" method="post">
-          <h2 class="callback__heading">оставить заявку</h2>
+          <h2 class="callback__heading">заказать звонок</h2>
           <div class="form__element form__element_name">
             <label class="label" for="name1">Имя</label>
             <input id="name1" class="input input_outline js-input" type="text" name="name" value="">
