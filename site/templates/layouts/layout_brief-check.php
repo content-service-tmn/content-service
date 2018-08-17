@@ -249,18 +249,21 @@ $brief_content = file_get_contents($page->brief_data->filename);
     function success(result) {
         UIkit.offcanvas.hide([force = false]);
         UIkit.notify({
-            message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+            message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
             status: result,
             timeout: 3000,
-            pos: 'bottom-center'
+            pos: 'top-right'
         });
+        setTimeout(function () {
+            window.location.replace("/");
+        }, 5000);
     }
     function error() {
         UIkit.notify({
             message: 'Ошибка отправки сообщения',
             status: 'warning',
             timeout: 3000,
-            pos: 'bottom-center'
+            pos: 'top-right'
         });
     }
 

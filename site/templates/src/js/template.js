@@ -63,10 +63,10 @@ $(document).ready(function() {
             success: function (result) {
                 UIkit.offcanvas.hide([force = false]);
                 UIkit.notify({
-                    message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+                    message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
                     status: result,
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             },
             error: function (result) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
                     message: 'Ошибка отправки сообщения',
                     status: 'warning',
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             }
 
@@ -126,10 +126,10 @@ $(document).ready(function() {
             success: function (result) {
                 UIkit.offcanvas.hide([force = false]);
                 UIkit.notify({
-                    message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+                    message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
                     status: result,
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             },
             error: function (result) {
@@ -137,7 +137,7 @@ $(document).ready(function() {
                     message: 'Ошибка отправки сообщения',
                     status: 'warning',
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             }
 
