@@ -283,7 +283,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 }
                 $(this).removeClass("error");
             });
-            $('.js-phone').on('focusout', function(e) {
+            $("[name='phone']").on('focusout', function(e) {
                 e.preventDefault();
                 var val = $(this).val().replace(/[^0-9]/gi,'');
                 if(val.substr(0, 1) == 7) {
