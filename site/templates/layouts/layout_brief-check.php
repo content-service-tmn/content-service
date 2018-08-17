@@ -26,6 +26,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                     <div class="form__element form__element_brief">
                         <label class="label" for="namepattern_id">pattern_text</label>
                         <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="pattern_name">
+                        <p class="form__format">привет я тут</p>
                     </div>
                 </form>
                 <!--<div class="brief__submit submit">далее</div>-->
@@ -219,9 +220,9 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 buildMultiply(node, currentid);
                 break;
         }
-        $(function() { 
-			callibriInit() 
-		}); 
+        $(function() {
+			callibriInit()
+		});
 
     }
 
