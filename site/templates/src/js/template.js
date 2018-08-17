@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
         $(this).removeClass("error");
     });
-    $('[name=phone]').on('focusout', function(e) {
+    $("[name='phone']").on('focusout', function(e) {
         e.preventDefault();
         var val = $(this).val().replace(/[^0-9]/gi,'');
         if(val.substr(0, 1) == 7) {
