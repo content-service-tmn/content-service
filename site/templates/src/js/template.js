@@ -53,6 +53,8 @@ $(document).ready(function() {
             name: name_filed.val(),
             phone: phone_filed.val()
         };
+        name_filed.val("");
+        phone_filed.val("");
 
         $.ajax({
             url: "ajax-handler/",
@@ -113,6 +115,9 @@ $(document).ready(function() {
         if (from != undefined){
             data.from = from;
         }
+
+        name_filed.val("");
+        phone_filed.val("");
 
         $.ajax({
             url: "../ajax-handler/",
