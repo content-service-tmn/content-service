@@ -10,6 +10,7 @@
 .form__textarea {
   position: relative;
   textarea {
+    font-family: "Oswald",arial,sans-serif;
     display: block;
     outline: none;
     border: none;
@@ -53,6 +54,7 @@
     }
   }
   .label {
+    font-family: "Oswald",arial,sans-serif;
     position: absolute;
     width: 100%;
     padding-bottom:5px;
@@ -271,4 +273,20 @@
     background-image:url(../img/vector.svg);
     right:0;
   }
+}
+
+.form__format {
+  position:absolute;
+  font-family: "Oswald",arial,sans-serif;
+  font-weight: 500;
+  font-size:12px;
+  line-height: 14px;
+  opacity:0;
+  color: red;
+  transition:All 0.2s;
+  text-transform: uppercase;
+}
+
+.error + .form__format {
+  opacity:1;
 }

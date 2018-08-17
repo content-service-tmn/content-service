@@ -36,6 +36,7 @@
           <div class="form__element form__element_phone">
             <label class="label" for="phone">Телефон</label>
             <input id="phone" class="input input_outline js-input js-phone" type="text" name="phone" value="">
+            <p class="form__format">Формат ввода: 8хххххххххх</p>
           </div>
           <div class="form__element form__element_submit">
             <div class="send">
