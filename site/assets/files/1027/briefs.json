@@ -67,6 +67,7 @@
                                               {
                                                 "varname": "phone",
                                                 "datavalidator": "\\+?[7-8]\\d{10}",
+                                                "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                 "vartitle": "Телефон",
                                                 "next": null
                                               },
@@ -109,6 +110,7 @@
                                         {
                                           "varname": "phone",
                                           "datavalidator": "\\+?[7-8]\\d{10}",
+                                          "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                           "vartitle": "Телефон",
                                           "next": null
                                         },
@@ -192,6 +194,7 @@
                                         {
                                           "varname": "phone",
                                           "datavalidator": "\\+?[7-8]\\d{10}",
+                                          "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                           "vartitle": "Телефон",
                                           "next": null
                                         },
@@ -280,6 +283,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -341,6 +345,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -413,6 +418,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -474,6 +480,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -588,6 +595,7 @@
                                                           {
                                                             "varname": "phone",
                                                             "datavalidator": "\\+?[7-8]\\d{10}",
+                                                            "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                             "vartitle": "Телефон",
                                                             "next": null
                                                           },
@@ -642,6 +650,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -705,6 +714,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -759,6 +769,7 @@
                                               {
                                                 "varname": "phone",
                                                 "datavalidator": "\\+?[7-8]\\d{10}",
+                                                "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                 "vartitle": "Телефон",
                                                 "next": null
                                               },
@@ -845,6 +856,7 @@
                                         {
                                           "varname": "phone",
                                           "datavalidator": "\\+?[7-8]\\d{10}",
+                                          "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                           "vartitle": "Телефон",
                                           "next": null
                                         },
@@ -952,6 +964,7 @@
                                                           {
                                                             "varname": "phone",
                                                             "datavalidator": "\\+?[7-8]\\d{10}",
+                                                            "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                             "vartitle": "Телефон",
                                                             "next": null
                                                           },
@@ -1005,6 +1018,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },
@@ -1074,6 +1088,7 @@
                                                           {
                                                             "varname": "phone",
                                                             "datavalidator": "\\+?[7-8]\\d{10}",
+                                                            "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                             "vartitle": "Телефон",
                                                             "next": null
                                                           },
@@ -1127,6 +1142,7 @@
                                                     {
                                                       "varname": "phone",
                                                       "datavalidator": "\\+?[7-8]\\d{10}",
+                                                      "errormessage": "ФОРМАТ ВВОДА: 8ХХХХХХХХХХ",
                                                       "vartitle": "Телефон",
                                                       "next": null
                                                     },

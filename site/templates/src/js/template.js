@@ -32,7 +32,7 @@ $(document).ready(function() {
         var name_filed = $("#name");
         var phone_filed = $("#phone");
 
-        var regex_phone = new RegExp(/\d{11}/);
+        var regex_phone = new RegExp(/\+?[7-8]\d{10}/);
         var regex_name = new RegExp(/.+/);
 
         var hasErr = false;
@@ -90,7 +90,7 @@ $(document).ready(function() {
         var name_filed = $("#name1");
         var phone_filed = $("#phone1");
 
-        var regex_phone = new RegExp(/\d{11}/);
+        var regex_phone = new RegExp(/\+?[7-8]\d{10}/);
         var regex_name = new RegExp(/.+/);
 
         var hasErr = false;
