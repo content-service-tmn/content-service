@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
         $(this).removeClass("error");
     });
-    $('.js-phone').on('focusout', function(e) {
+    $("[name='phone']").on('focusout', function(e) {
         e.preventDefault();
         var val = $(this).val().replace(/[^0-9]/gi,'');
         if(val.substr(0, 1) == 7) {
@@ -32,7 +32,7 @@ $(document).ready(function() {
         var name_filed = $("#name");
         var phone_filed = $("#phone");
 
-        var regex_phone = new RegExp(/\d{11}/);
+        var regex_phone = new RegExp(/\+?[7-8]\d{10}/);
         var regex_name = new RegExp(/.+/);
 
         var hasErr = false;
@@ -63,10 +63,10 @@ $(document).ready(function() {
             success: function (result) {
                 UIkit.offcanvas.hide([force = false]);
                 UIkit.notify({
-                    message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+                    message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
                     status: result,
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             },
             error: function (result) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
                     message: 'Ошибка отправки сообщения',
                     status: 'warning',
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             }
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
         var name_filed = $("#name1");
         var phone_filed = $("#phone1");
 
-        var regex_phone = new RegExp(/\d{11}/);
+        var regex_phone = new RegExp(/\+?[7-8]\d{10}/);
         var regex_name = new RegExp(/.+/);
 
         var hasErr = false;
@@ -126,10 +126,10 @@ $(document).ready(function() {
             success: function (result) {
                 UIkit.offcanvas.hide([force = false]);
                 UIkit.notify({
-                    message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+                    message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
                     status: result,
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             },
             error: function (result) {
@@ -137,7 +137,7 @@ $(document).ready(function() {
                     message: 'Ошибка отправки сообщения',
                     status: 'warning',
                     timeout: 3000,
-                    pos: 'bottom-center'
+                    pos: 'top-right'
                 });
             }
 

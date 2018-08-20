@@ -14,7 +14,7 @@
           <p><span class="content__quote content__quote_<?=$page->service_quote_class?>"><?=$page->service_quote?></span></p>
           <a href="<?=$pages->get("template=layout_cases")->url?>" class="content__case content__case_<?=$page->service_quote_class?>">посмотреть кейсы</a>
           <div class="content__button">
-            <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">рассчитать стоимость</a>
+            <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">Заполнить бриф</a>
             <a href="#callback" class="button button_<?=$page->service_quote_class?>" data-uk-offcanvas="{mode:'slide'}">заказать звонок</a>
           </div>
         <ul class="content__items">

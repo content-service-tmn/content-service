@@ -49,8 +49,6 @@ $config->dbHost = 'localhost';
 $config->dbName = 'cu49180_prod';
 $config->dbUser = 'cu49180_prod';
 $config->dbPass = 'AuSw495y';
-$config->dbPort = '3306';
-
 /**
  * Installer: User Authentication Salt
  *
@@ -92,4 +90,4 @@ $config->installed = 1532435276;
  * Installer: HTTP Hosts Whitelist
  *
  */
-$config->httpHosts = array('contentservice.agency');
+$config->httpHosts = array('cw40247.tmweb.ru', 'localhost:8888');

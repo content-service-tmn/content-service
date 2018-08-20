@@ -26,7 +26,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                     <div class="form__element form__element_brief">
                         <label class="label" for="namepattern_id">pattern_text</label>
                         <input id="namepattern_id" data-validator="pattern_validator" data-title="pattern_text" class="input input_outline js-input brief-form__text" type="text" name="pattern_name">
-                        <p class="form__format">привет я тут</p>
+                        <p class="form__format">pattern_errormessage</p>
                     </div>
                 </form>
                 <!--<div class="brief__submit submit">далее</div>-->
@@ -115,6 +115,11 @@ $brief_content = file_get_contents($page->brief_data->filename);
             	variable = variable.replace(/pattern_name/g, item.input_name);
             } else {
             	variable = variable.replace(/pattern_name/g, item.varname);
+            }
+            if(item.errormessage != undefined) {
+                variable = variable.replace(/pattern_errormessage/g, item.errormessage);
+            } else {
+                variable = variable.replace(/pattern_errormessage/g, "");
             }
             variables += variable;
         });
@@ -244,18 +249,21 @@ $brief_content = file_get_contents($page->brief_data->filename);
     function success(result) {
         UIkit.offcanvas.hide([force = false]);
         UIkit.notify({
-            message: (result == "success") ? 'Ваше сообщение успешно отправлено' : 'Ошибка отправки сообщения',
+            message: (result == "success") ? 'Благодарим за обращение! В скором времени мы Вам перезвоним.' : 'Ошибка отправки сообщения',
             status: result,
             timeout: 3000,
-            pos: 'bottom-center'
+            pos: 'top-right'
         });
+        setTimeout(function () {
+            window.location.replace("/");
+        }, 5000);
     }
     function error() {
         UIkit.notify({
             message: 'Ошибка отправки сообщения',
             status: 'warning',
             timeout: 3000,
-            pos: 'bottom-center'
+            pos: 'top-right'
         });
     }
 
@@ -278,7 +286,7 @@ $brief_content = file_get_contents($page->brief_data->filename);
                 }
                 $(this).removeClass("error");
             });
-            $('.js-phone').on('focusout', function(e) {
+            $("[name='phone']").on('focusout', function(e) {
                 e.preventDefault();
                 var val = $(this).val().replace(/[^0-9]/gi,'');
                 if(val.substr(0, 1) == 7) {
