@@ -26,6 +26,15 @@
                     </div>
                   </li>
                 <?php endforeach; ?>
+                <?php foreach ($pages->find("template=case") as $pge): ?>
+                  <li class="cases__slide">
+                    <div class="case-block" style="background-image:url('<?= $pge->case_image->url ?>')">
+                      <h1 class="case-block__heading"><?= $pge->title ?></h1>
+                      <p class="case-block__text"><?= $pge->case_typeOfService ?></p>
+                      <a href="<?= $pge->url ?>" class="case-block__link"></a>
+                    </div>
+                  </li>
+                <?php endforeach; ?>
               </ul>
             </div>
             <a href=""data-uk-slider-item="previous" class="cases__nav cases__nav_left"></a>
