@@ -7,6 +7,7 @@
       <div class="home__fixed-cell">
           <div class="content">
               <h2 class="content__heading"><?=$page->title?></h2>
+              <p>Адрес сайта: motul-expert.ru</p>
               <h3 class="content__subheading"><?=$page->case_typeOfService?></h3>
               <p class="content__text"><?=$page->cases_content?></p>
               <p><span class="content__quote content__quote_case"><?=$page->cases_subtitle?></span></p>
