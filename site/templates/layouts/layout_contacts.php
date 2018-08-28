@@ -17,7 +17,7 @@
         <ul class="contacts__socials socials">
           <li class="socials__icon socials__icon_vk"><a href="https://vk.com/content_service" target="_blank" class="socials__link"></a></li>
           <li class="socials__icon socials__icon_inst"><a href="https://www.instagram.com/contentservice/" target="_blank" class="socials__link"></a></li>
-          <li class="socials__icon socials__icon_fb"><a href="https://www.facebook.com/contentservice72" target="_blank" class="socials__link"></a></li>
+          <!--<li class="socials__icon socials__icon_fb"><a href="https://www.facebook.com/contentservice72" target="_blank" class="socials__link"></a></li>-->
         </ul>
       </div>
     </div>
