@@ -63,6 +63,7 @@
           <li class="">
             <div class="sertificates-block sertificates-block_portrait">
               <img src="<?= $certificate->url?>" alt="">
+              <a href="<?= $certificate->url?>" class="sertificates-block__link" data-uk-lightbox></a>
             </div>
           </li>
           <?php endforeach; ?>
