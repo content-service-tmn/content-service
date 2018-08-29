@@ -38,7 +38,7 @@
   <div class="customers__grid">
       <?php foreach ($page->about_ourClients as $image): ?>
     <div class="customers__cell customer" style="background-image:url('<?=$image->url?>')">
-      <a href="#" class="customer__link"></a>
+    
     </div>
       <?php endforeach; ?>
   </div>
