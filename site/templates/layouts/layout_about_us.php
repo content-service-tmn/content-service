@@ -36,7 +36,7 @@
 <section class="customers">
   <h2 class="customers__heading">официальные партнеры</h2>
   <div class="customers__grid">
-      <?php foreach ($page->about_ourClients as $image): ?>
+      <?php foreach ($page->about_ourPartners as $image): ?>
     <div class="customers__cell customer" style="background-image:url('<?=$image->url?>')">
       <a href="#" class="customer__link"></a>
     </div>
@@ -59,21 +59,13 @@
     <div class="uk-slidenav-position" data-uk-slider="{center:true}">
       <div class="uk-slider-container">
         <ul class="uk-slider uk-grid uk-grid-small">
+          <?php foreach ($page->about_certificates as $certificate): ?>
           <li class="">
             <div class="sertificates-block sertificates-block_portrait">
-              <img src="https://psv4.userapi.com/c848320/u32422792/docs/d16/71d547502c9a/Sertifikat_Internet-marketing-001.jpg?extra=oT35bmrXxlGt8uRU8qxsVRjUDvfK1SoiyfNBsjNAEychcfNPww4z1t0_H4t3Gjew3_f7EEixjUEpoRS67AjtM-DATdF-6LbSMENS40VZXabUfKQtR8Dmp3Vg3imhUpIJ2DSVUpYTCA" alt="">
+              <img src="<?= $certificate->url?>" alt="">
             </div>
           </li>
-          <li class="">
-            <div class="sertificates-block sertificates-block_portrait">
-              <img src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?ixlib=rb-0.3.5&s=6429b9b6cefb44d85d71efdfe9c5bd96&w=1000&q=80" alt="">
-            </div>
-          </li>
-          <li class="">
-            <div class="sertificates-block sertificates-block_portrait">
-              <img src="https://pp.userapi.com/c849320/v849320390/587a6/eyilefpWZQY.jpg" alt="">
-            </div>
-          </li>
+          <?php endforeach; ?>
         </ul>
       </div>
       <a href=""data-uk-slider-item="previous" class="sertificates__nav sertificates__nav_left"></a>
