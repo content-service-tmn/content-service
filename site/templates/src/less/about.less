@@ -1,4 +1,24 @@
 .about {
+  position:relative;
+  &:after {
+    content:"";
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    width:50px;
+    height:50px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: 50% 50%;
+    background-image:url(../img/next.svg);
+    transform:translateX(-50%) rotate(90deg);
+    @media(min-width: 1920px) {
+      left:25%;
+    }
+    @media(max-width: 1023px) {
+      display:none;
+    }
+  }
   &__grid {
     display:flex;
     flex-wrap: wrap;
