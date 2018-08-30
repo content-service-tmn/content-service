@@ -3,6 +3,7 @@
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
 <section class="about">
+  <a href="#customers" class="about__arrow" data-uk-smooth-scroll></a>
   <div class="about__grid">
     <div class="about__cell about__cell_left">
       <div class="content">
@@ -33,7 +34,7 @@
     </div>
   </div>
 </section>
-<section class="customers">
+<section id="customers" class="customers">
   <h2 class="customers__heading">официальные партнеры</h2>
   <div class="customers__grid">
       <?php foreach ($page->about_ourPartners as $image): ?>
