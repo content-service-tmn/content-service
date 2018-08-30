@@ -8,11 +8,12 @@
     <div class="service__cell service__cell_left">
       <div class="content">
         <h2 class="content__heading"><?=$page->service_title?></h2>
+        <a href="<?=$pages->get("template=layout_cases")->url?>" class="content__case content__case_<?=$page->service_quote_class?>">посмотреть кейсы</a>
           <ul class="content__text">
            <?=$page->service_content?>
           </ul>
           <p><span class="content__quote content__quote_<?=$page->service_quote_class?>"><?=$page->service_quote?></span></p>
-          <a href="<?=$pages->get("template=layout_cases")->url?>" class="content__case content__case_<?=$page->service_quote_class?>">посмотреть кейсы</a>
+          <a href="" class="content__case content__case_price content__case_<?=$page->service_quote_class?>">посмотреть прайс</a>
           <div class="content__button">
             <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">Заполнить бриф</a>
             <a href="#callback" class="button button_<?=$page->service_quote_class?>" data-uk-offcanvas="{mode:'slide'}">заказать звонок</a>
