@@ -160,6 +160,8 @@ $(document).ready(function() {
       $('[data-svg-id="' + id + '"]').addClass('is_active');
     });
 
-
+    $('.prices-block__button').on('click', function () {
+       $("#leave_callback").data("from", $(this).data("from"));
+    });
 
 });
