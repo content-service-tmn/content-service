@@ -7,7 +7,7 @@
     <div class="prices__cell prices__cell_left">
       <h2 class="prices__heading">прайс лист</h2>
       <div class="prices__list">
-      	<?php foreach($page->prices as $price): ?>
+        <?php foreach($page->prices as $price): ?>
         <div class="prices__item">
           <div class="prices-block">
             <div class="prices-block__grid">
@@ -18,10 +18,14 @@
             <div class="prices-block__text">
               <?=$price->price_content?>
             </div>
+            <a href="#callback" id="leave_callback" data-from="<?=$price->price_header?>" data-uk-offcanvas="{mode:'slide'}" class="prices-block__button">заказать</a>
           </div>
         </div>
         <?php endforeach; ?>
       </div>
+      <p class="prices__footer">
+        *Стоимости указаны на типовые версии сайтов. Стоимость индивидуальной комплектации рассчитывается отдельно.
+      </p>
     </div>
     <div class="prices__cell prices__cell_right">
       <div class="prices__background" style="background-image:url(<?=$config->urls->templates?>assets/img/service-2-b.png)"></div>
