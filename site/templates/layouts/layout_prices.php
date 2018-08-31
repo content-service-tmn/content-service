@@ -18,7 +18,7 @@
             <div class="prices-block__text">
               <?=$price->price_content?>
             </div>
-            <a href="" class="prices-block__button">заказать</a>
+            <a href="#callback" id="leave_callback" data-from="<?=$price->price_header?>" data-uk-offcanvas="{mode:'slide'}" class="prices-block__button">заказать</a>
           </div>
         </div>
         <?php endforeach; ?>
