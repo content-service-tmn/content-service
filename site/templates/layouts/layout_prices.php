@@ -1,3 +1,4 @@
+<?php namespace Processwire; ?>
 <section class="header header_fixed">
   <a href="#sidebar" class="burger" data-uk-offcanvas="{mode: 'slide'}"></a>
 </section>
@@ -6,63 +7,20 @@
     <div class="prices__cell prices__cell_left">
       <h2 class="prices__heading">прайс лист</h2>
       <div class="prices__list">
+      	<?php foreach($page->prices as $price): ?>
         <div class="prices__item">
           <div class="prices-block">
             <div class="prices-block__grid">
-              <h3 class="prices-block__heading">сайт визитка</h3>
-              <h3 class="prices-block__price">40 000 р</h3>
+              <h3 class="prices-block__heading"><?=$price->price_header?></h3>
+              <h3 class="prices-block__price"><?=$price->price_price?></h3>
             </div>
-            <p class="prices-block__subheading">Landing Page</p>
+            <p class="prices-block__subheading"><?=$price->price_subtitle?></p>
             <div class="prices-block__text">
-              <p>Подойдет для презентации вашего бизнеса:</p>
-              <ul>
-                <li>акции и спецпредложения</li>
-                <li>формы заявок и обратных звонков</li>
-                <li>преимущества компании</li>
-                <li>адапатация под все мобильные устройства</li>
-                <li>панель управления сайтом</li>
-              </ul>
+              <?=$price->price_content?>
             </div>
           </div>
         </div>
-        <div class="prices__item">
-          <div class="prices-block">
-            <div class="prices-block__grid">
-              <h3 class="prices-block__heading">сайт визитка</h3>
-              <h3 class="prices-block__price">40 000 р</h3>
-            </div>
-            <p class="prices-block__subheading">Landing Page</p>
-            <div class="prices-block__text">
-              <p>Подойдет для презентации вашего бизнеса:</p>
-              <ul>
-                <li>акции и спецпредложения</li>
-                <li>формы заявок и обратных звонков</li>
-                <li>преимущества компании</li>
-                <li>адапатация под все мобильные устройства</li>
-                <li>панель управления сайтом</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="prices__item">
-          <div class="prices-block">
-            <div class="prices-block__grid">
-              <h3 class="prices-block__heading">сайт визитка</h3>
-              <h3 class="prices-block__price">40 000 р</h3>
-            </div>
-            <p class="prices-block__subheading">Landing Page</p>
-            <div class="prices-block__text">
-              <p>Подойдет для презентации вашего бизнеса:</p>
-              <ul>
-                <li>акции и спецпредложения</li>
-                <li>формы заявок и обратных звонков</li>
-                <li>преимущества компании</li>
-                <li>адапатация под все мобильные устройства</li>
-                <li>панель управления сайтом</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
     <div class="prices__cell prices__cell_right">
