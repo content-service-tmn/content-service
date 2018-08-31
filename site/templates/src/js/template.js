@@ -161,7 +161,7 @@ $(document).ready(function() {
     });
 
     $('.prices-block__button').on('click', function () {
-       $("#leave_callback").data("from", $(this).data("from"));
+       $("#leave_callback").attr("data-from", $(this).data("from"));
     });
 
 });

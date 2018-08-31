@@ -7,29 +7,33 @@
     <div class="prices__cell prices__cell_left">
       <h2 class="prices__heading">прайс лист</h2>
       <div class="prices__list">
-        <?php foreach($page->prices as $price): ?>
-        <div class="prices__item">
-          <div class="prices-block">
-            <div class="prices-block__grid">
-              <h3 class="prices-block__heading"><?=$price->price_header?></h3>
-              <h3 class="prices-block__price"><?=$price->price_price?></h3>
+          <?php foreach ($page->prices as $price): ?>
+            <div class="prices__item">
+              <div class="prices-block">
+                <div class="prices-block__grid">
+                  <h3 class="prices-block__heading"><?= $price->price_header ?></h3>
+                  <h3 class="prices-block__price"><?= $price->price_price ?></h3>
+                </div>
+                <p class="prices-block__subheading"><?= $price->price_subtitle ?></p>
+                <div class="prices-block__text">
+                  <?= $price->price_content ?>
+                </div>
+                <div class="prices-block__button-wrapper">
+                  <a href="#callback" data-from="<?= $price->price_header ?>" data-uk-offcanvas="{mode:'slide'}"
+                     class="prices-block__button">заказать</a>
+                </div>
+              </div>
             </div>
-            <p class="prices-block__subheading"><?=$price->price_subtitle?></p>
-            <div class="prices-block__text">
-              <?=$price->price_content?>
-            </div>
-            <a href="#callback" data-from="<?=$price->price_header?>" data-uk-offcanvas="{mode:'slide'}" class="prices-block__button">заказать</a>
-            <div id="leave_callback" data-from=""></div>
-          </div>
-        </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
       </div>
+      <div id="leave_callback" data-from=""></div>
       <p class="prices__footer">
         *Стоимости указаны на типовые версии сайтов. Стоимость индивидуальной комплектации рассчитывается отдельно.
       </p>
     </div>
     <div class="prices__cell prices__cell_right">
-      <div class="prices__background" style="background-image:url(<?=$config->urls->templates?>assets/img/service-2-b.png)"></div>
+      <div class="prices__background"
+           style="background-image:url(<?= $config->urls->templates ?>assets/img/service-2-b.png)"></div>
     </div>
   </div>
 </section>
