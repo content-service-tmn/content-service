@@ -18,8 +18,7 @@
         <li class="sidebar__item"><a href="/" data-uk-smoothscroll>главная</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_work")->url?>">схема работы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_services")->url?>">услуги content service</a></li>
-        <li class="sidebar__item"><a href="">прайсы</a></li>
-        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_cases")->url?>" data-uk-smoothscroll>кейсы</a></li>
+        <li class="sidebar__item"><a href="<?=$pages->get("template=layout_cases")->url?>">кейсы</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_about_us")->url?>">об агентстве</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_brief-check")->url?>">бриф</a></li>
         <li class="sidebar__item"><a href="<?=$pages->get("template=layout_contacts")->url?>">контакты</a></li>
