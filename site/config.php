@@ -45,10 +45,10 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  *
  */
 
- $config->dbHost = 'localhost';
- $config->dbName = 'cw40247_prod';
- $config->dbUser = 'cw40247_prod';
- $config->dbPass = 'AuSw495y';
+$config->dbHost = 'localhost';
+$config->dbName = 'cu49180_prod';
+$config->dbUser = 'cu49180_prod';
+$config->dbPass = 'AuSw495y';
 /**
  * Installer: User Authentication Salt
  *

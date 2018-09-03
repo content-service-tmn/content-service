@@ -14,7 +14,7 @@
           </ul>
           <p><span class="content__quote content__quote_<?=$page->service_quote_class?>"><?=$page->service_quote?></span></p>
           <?php if ($page->id == 1030): ?>
-          <a href="/prices" class="content__case content__case_price content__case_<?=$page->service_quote_class?>">посмотреть прайс</a>
+          <a href="/prices" class="content__price">посмотреть прайс</a>
           <?php endif; ?>
           <div class="content__button">
             <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">Заполнить бриф</a>
