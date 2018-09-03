@@ -13,7 +13,9 @@
            <?=$page->service_content?>
           </ul>
           <p><span class="content__quote content__quote_<?=$page->service_quote_class?>"><?=$page->service_quote?></span></p>
-          <a href="" class="content__price">посмотреть прайс</a>
+          <?php if ($page->id == 1030): ?>
+          <a href="/prices" class="content__price">посмотреть прайс</a>
+          <?php endif; ?>
           <div class="content__button">
             <a href="<?=$pages->get("template=layout_brief-check")->url?>" class="button">Заполнить бриф</a>
             <a href="#callback" class="button button_<?=$page->service_quote_class?>" data-uk-offcanvas="{mode:'slide'}">заказать звонок</a>
