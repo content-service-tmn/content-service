@@ -139,21 +139,30 @@
       margin-right: 0px;
     }
   }
+  &__price {
+    font-family: "Oswald";
+    display:inline-block;
+    font-size:22px;
+    border-bottom:2px solid #000;
+    margin-top:30px;
+    transition:all 0.2s;
+    &:hover {
+      color:#00BCD6;
+      border-color:#00BCD6;
+    }
+  }
   &__case {
     margin-top:15px;
     display:inline-block;
     border-bottom:2px solid #00BCD6;
+    transition:all 0.2s;
     &:hover {
-      color:black;
+      color:rgba(100,234,255, 1);
       border-color:black;
     }
     @media(min-width: 1920px) {
       // margin-top:20px;
     }
-    &_price {
-      margin-top:30px;
-    }
-
     &_content {
       color:rgb(255, 124, 124);
       border-color:rgb(255, 124, 124);
