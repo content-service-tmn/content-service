@@ -45,10 +45,10 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  *
  */
 
- $config->dbHost = ( gethostname() == "vh130.timeweb.ru" ) ? 'localhost':'92.53.96.195';
- $config->dbName = 'cw40247_db';
- $config->dbUser = 'cw40247_db';
- $config->dbPass = 's2azaeR1';
+$config->dbHost = 'localhost';
+$config->dbName = 'cu49180_prod';
+$config->dbUser = 'cu49180_prod';
+$config->dbPass = 'AuSw495y';
 /**
  * Installer: User Authentication Salt
  *
