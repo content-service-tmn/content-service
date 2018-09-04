@@ -151,6 +151,14 @@ $(document).ready(function() {
     $('#cases').on('outview.uk.scrollspy', function(){
       $('.home__fixed-cell').toggleClass('is_hidden');
     });
+    $('#ff').on('inview.uk.scrollspy', function(){
+      $('.content__inner').toggleClass('active');
+      $('.review').toggleClass('active');
+    });
+    $('#ff').on('outview.uk.scrollspy', function(){
+      $('.content__inner').toggleClass('active');
+      $('.review').toggleClass('active');
+    });
 
     $('.accordion__item').on('click', function() {
       var id = $(this).attr('data-id');

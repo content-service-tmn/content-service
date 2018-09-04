@@ -1,0 +1,87 @@
+.review {
+  @media(min-width: 1024px) {
+    box-sizing: border-box;
+    width:~"calc(50% - 30px)";
+    position:fixed;
+    padding: 0 60px;
+    left:60px;
+    top:181px;
+    opacity:0;
+    &.active {
+      opacity:1;
+      transition:all 0.4s;
+    }
+  }
+  @media(max-width: 1023px) {
+    padding:60px;
+  }
+  @media(max-width: 767px) {
+    padding:60px 20px;
+  }
+  &__heading {
+    @media(min-width: 1023px) {
+      font-size: 24px;
+    }
+  }
+  &__grid {
+    margin-top:45px;
+    display:flex;
+  }
+  &__img {
+    width:80px;
+    height:80px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 50% 50%;
+  }
+  &__cell {
+    padding-left: 15px;
+  }
+  &__name {
+    font-size:22px;
+    line-height: 26px;
+  }
+  &__post {
+    margin-top:10px;
+    font-size:18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  &__text {
+    font-style:italic;
+    font-weight: 300;
+    font-size:20px;
+    line-height: 28px;
+    position:relative;
+    margin-top:45px;
+    z-index:1;
+    &:before,&:after {
+      content:"";
+      position:absolute;
+      z-index:-1;
+      top:0;
+      left:0;
+      width:48px;
+      height:77px;
+      background-image:url(../img/quote.svg);
+      background-position: 50% 50%;
+      background-size:contain;
+      background-repeat: no-repeat;
+    }
+    &:before {
+      transform:translate(-36px,-50%);
+      @media(max-width: 1023px) {
+        transform:translate(-10px,-50%);
+      }
+    }
+    &:after {
+      transform:translate(24px,-50%);
+      @media(max-width: 1023px) {
+        transform:translate(50px,-50%);
+      }
+    }
+  }
+}
