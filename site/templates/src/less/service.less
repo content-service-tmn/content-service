@@ -36,7 +36,13 @@
     width:50%;
     position:fixed;
   }
-
+  &__inner {
+    opacity:0;
+    &.active {
+      opacity:1;
+      transition:all 0.4s;
+    }
+  }
   &__heading {
     // margin-top:100px;
     // @media(min-width: 1920px) {
