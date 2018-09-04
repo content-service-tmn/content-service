@@ -67,7 +67,7 @@
  Рекомендуем!
               </p>
               <div class="review__grid">
-                <div class="review__img" style="background-image:url(https://psv4.userapi.com/c834503/u66202581/docs/d16/0fea0e0a02e1/qAVOVo8z4bA.jpg?extra=sRhHNuRJsicUvgP5M9qBQMBR4LVDe_OefCyCwaHsj_1N81cjpcHGXAXI5CdALyr16qda4uoI6fXKrndM3ciHxRcUDLYn0W2W_MdgF87vo7VjwzzW770RsOd92bpwqNczPMur0QEX8A)"></div>
+                <div class="review__img" style="background-image:url(<?=$config->urls->templates?>assets/img/feedback.jpg)"></div>
                 <div class="review__cell">
                   <h3 class="review__name">ольга седова</h3>
                   <p class="review__post">Маркетолог  АО "2МЕН ГРУПП"</p>
