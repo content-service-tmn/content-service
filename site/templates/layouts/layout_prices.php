@@ -33,7 +33,19 @@
     </div>
     <div class="prices__cell prices__cell_right">
       <div class="prices__background"
-           style="background-image:url(<?= $config->urls->templates ?>assets/img/service-2-b.png)"></div>
+         style="background-image:url(<?= $config->urls->templates ?>assets/img/service-2-b.png)">
+         <div class="background-proposal">
+           <div class="background-proposal__glass" style="background-image:url(<?= $config->urls->templates ?>assets/img/service-2-b.png)">
+           </div>
+           <div class="background-proposal__panel">
+             <h3 class="background-proposal__heading">сайт в рассрочку</h3>
+             <p class="background-proposal__text">
+               Хотите избежать единовременных трат? Вы можете заказать разработку сайта в рассрочку
+             </p>
+             <a href="#callback" class="background-proposal__button" data-uk-offcanvas="{mode:'slide'}">оставить заявку</a>
+           </div>
+         </div>
+       </div>
     </div>
   </div>
 </section>
